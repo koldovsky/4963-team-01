@@ -35,3 +35,4 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Vitalii Brytan
 - Volodymyr Andriichak
 - Ivan Butryn
+- Vladyslav Bondarenko
