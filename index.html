@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Wine Store Website</title>
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
@@ -12,15 +12,37 @@
     ></script>
   </head>
   <body>
+    <!-- IF THERE ARE ANY MISTAKES IN THE COMMENTS, I APOLOGIZE -->
+    <!-- FIX THEM AND CONTINUE INSERTING YOUR BLOCKS IN THAT STYLE -->
+    <!-- Here is the actual table: https://docs.google.com/spreadsheets/d/1JiJa2gdOwm0Sn6SJTLb7j3ZhMzCGTL5Hwy2xu_c6u-I/edit?gid=0#gid=0 -->
+
     <header class="header">
+      <!-- Bilous Andrii (1) -->
       <nav
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="global.header-nav.partial.html"
       ></nav>
+      <!-- ============== -->
     </header>
     <main class="main">
-      <!-- Ivan Butryn -->
+      <!-- Vitalii Brytan (3) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.best-deals.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Bondarenko Vladyslav (5) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.varieties.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Ivan Butryn (6)-->
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
@@ -31,32 +53,30 @@
         data-hx-swap="outerHTML"
         data-hx-get="index.history.partial.html"
       ></section>
-      <!-- Ivan Butryn -->
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.best-deals.partial.html"
-      ></section>
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.varieties.partial.html"
-      ></section>
+      <!-- ============== -->
+
+      <!-- Novykov Dmytro (10) -->
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.questions-and-answers.partial.html"
       ></section>
+      <!-- ============== -->
+
+      <!-- Volodymyr Andriichak (11)-->
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.newsletter.partial.html"
       ></section>
+      <!-- ============== -->
     </main>
+    <!-- Volodymyr Andriichak (11)-->
     <footer
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="global.footer.partial.html"
     ></footer>
+    <!-- ============== -->
   </body>
 </html>
