@@ -8,6 +8,7 @@
     But I did that because of inconsistencies in use of <h2>, <h3>, <p>, etc...  
 */
 
+/* This should probably be <h2> */
 .section-title {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
@@ -20,6 +21,7 @@
   font-family: "Prata", serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 20px;
 }
 
 p {
