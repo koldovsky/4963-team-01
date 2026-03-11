@@ -2,6 +2,10 @@
 @import "components.css";
 @import "typography.css";
 @import "global.header-nav.partial.css";
+@import "index.varieties.partial.css";
+@import "index.about.partial.css";
+
+@import "index.hero.partial.css";
 
 @import "index.best-deals.partial.css";
 
