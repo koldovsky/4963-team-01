@@ -1,5 +1,4 @@
 /* No Mobile-First approach, this is more of a testing css */
-/* Probably should use Grid instead of Flex */
 
 .best-deals {
   display: flex;
@@ -51,31 +50,16 @@
     }
   }
 }
-<<<<<<< HEAD
-.best-deals__title {
-=======
 /* No Mobile-First approach, this is more of a testing css */
 /* Probably should use Grid instead of Flex */
 
 .best-deals {
->>>>>>> 1e7249ae05f7689ae3c37160381e2d1b6a7cfdcc
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-<<<<<<< HEAD
-  .best-deals__subtitle {
-    font-size: 3rem;
-  }
-
-  .best-deals__paragraph {
-    margin-top: 20px;
-  }
-
-  .varieties__illustration {
-=======
   .best-deals__title {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight);
@@ -99,7 +83,6 @@
   }
 
   .best-deals__illustration {
->>>>>>> 1e7249ae05f7689ae3c37160381e2d1b6a7cfdcc
     margin-top: 25px;
   }
 
@@ -119,8 +102,4 @@
       }
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1e7249ae05f7689ae3c37160381e2d1b6a7cfdcc
