@@ -1,53 +1,65 @@
-.varieties__title {
-  font-size: 28px;
-  color: var(--accent-color);
-  font-family: var(--font-family-title);
-  font-weight: var(--font-weight);
-}
-.varieties__subtitle {
-  font-family: var(--font-family-secondary);
-  font-weight: var(--font-weight);
-  font-size: 48px;
-  line-height: 62px;
-  margin-top: 20px;
-  color: var(--text-color);
-}
+.varieties {
+  display: block;
+  unicode-bidi: isolate;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  padding-top: 110px;
+  padding-bottom: 110px;
 
-.varieties__illustration {
-  margin-top: 25px;
-}
+  .varieties__title {
+    font-size: 28px;
+    color: var(--accent-color);
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight);
+  }
+  .varieties__subtitle {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--font-weight);
+    font-size: 48px;
+    line-height: 62px;
+    margin-top: 20px;
+    color: var(--text-color);
+  }
 
-.varieties__description {
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  font-size: 18px;
-  margin-top: 20px;
-  color: var(--text-color);
-}
+  .varieties__illustration {
+    margin-top: 25px;
+  }
 
-.redwines__title {
-  font-size: 22px;
-  color: var(--text-color);
-  font-family: var(--font-family-secondary);
-  margin-top: 40px;
-  margin-bottom: 25px;
-}
+  .varieties__description {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 18px;
+    margin-top: 20px;
+    color: var(--text-color);
+  }
 
-li {
-  font-size: 16px;
-  color: var(--text-color-secondary);
-  font-family: var(--font-family);
-}
+  .redwines__title {
+    font-size: 22px;
+    color: var(--text-color);
+    font-family: var(--font-family-secondary);
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
 
-li::before {
-  content: "— ";
-  color: var(--accent-color);
-}
+  li {
+    font-size: 16px;
+    color: var(--text-color-secondary);
+    font-family: var(--font-family);
+    list-style: none;
+  }
 
-.whitewines__title {
-  font-size: 22px;
-  color: var(--text-color);
-  font-family: var(--font-family-secondary);
-  margin-top: 40px;
-  margin-bottom: 25px;
+  li::before {
+    content: "— ";
+    color: var(--accent-color);
+  }
+
+  .whitewines__title {
+    font-size: 22px;
+    color: var(--text-color);
+    font-family: var(--font-family-secondary);
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
 }
