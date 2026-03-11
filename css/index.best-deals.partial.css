@@ -1,56 +1,4 @@
 /* No Mobile-First approach, this is more of a testing css */
-
-.best-deals {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  .best-deals__title {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight);
-    color: var(--accent-color);
-    font-size: 1.75rem;
-  }
-  
-  .best-deals__subtitle {
-    font-family: var(--font-family-secondary);
-    font-weight: var(--font-weight);
-    font-size: 3rem;
-    line-height: 62px;
-    margin-top: 20px;
-  }
-
-  .best-deals__paragraph {
-    font-family: var(--font-family);
-    font-weight: var(--font-weight);
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  .best-deals__illustration {
-    margin-top: 25px;
-  }
-
-  .best-deals__carousel {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-top: 50px;
-
-    .best-deals__carousel-items {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-
-      .best-deals__carousel-items__item {
-        width: 360px;
-      }
-    }
-  }
-}
-/* No Mobile-First approach, this is more of a testing css */
 /* Probably should use Grid instead of Flex */
 
 .best-deals {
@@ -59,6 +7,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 24px;
 
   .best-deals__title {
     font-family: var(--font-family-title);
@@ -76,8 +25,6 @@
   }
 
   .best-deals__paragraph {
-    font-family: var(--font-family);
-    font-weight: var(--font-weight);
     font-size: 18px;
     margin-top: 20px;
   }
@@ -93,12 +40,9 @@
     margin-top: 50px;
 
     .best-deals__carousel-items {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-
       .best-deals__carousel-items__item {
-        width: 360px;
+        width: 100%;
+        max-width: 360px;
       }
     }
   }
