@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+
 *,
 *::before,
 *::after {
@@ -8,6 +11,11 @@
 }
 
 :root {
+  --font-family: "Rubik", italic;
+  --font-family-title: "Great Vibes", normal;
+  --font-family-secondary: "Prata", normal;
+  --font-weight: 400;
+  --content-width: 1200px;
   --text-color: rgb(255, 255, 255);
   --text-color-secondary: rgb(137, 128, 130);
   --accent-color: rgb(200, 105, 58);
