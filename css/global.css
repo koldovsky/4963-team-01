@@ -9,8 +9,8 @@
 
 :root {
   --font-family: "Rubik", italic;
-  --font-family-secondary: "Great Vibes", normal;
-  --font-family-title: "Prata", normal;
+  --font-family-title: "Great Vibes", normal;
+  --font-family-secondary: "Prata", normal;
   --font-weight: 400;
   --content-width: 1200px;
   --text-color: rgb(255, 255, 255);
