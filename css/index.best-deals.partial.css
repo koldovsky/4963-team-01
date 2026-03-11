@@ -8,11 +8,25 @@
   align-items: center;
   text-align: center;
 
+  .best-deals__title {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight);
+    color: var(--accent-color);
+    font-size: 1.75rem;
+  }
+  
   .best-deals__subtitle {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--font-weight);
     font-size: 3rem;
+    line-height: 62px;
+    margin-top: 20px;
   }
 
   .best-deals__paragraph {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 18px;
     margin-top: 20px;
   }
 
