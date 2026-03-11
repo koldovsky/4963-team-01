@@ -1,0 +1,53 @@
+.nv {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nv__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 30px 0;
+}
+
+.nv__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.nv__menu-toggle, .nv__burger {
+    display: none;
+}
+
+.nv__menu-navigation, .nv__social-list {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nv__menu-link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nv__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    fill: var(--accent-color);
+    outline: 1px solid var(--accent-color);
+}
+
+.bi-facebook {
+    margin: 5.7px;
+}
+
+.bi-instagram {
+    margin: 6.5px;
+}
+
+.bi-youtube {
+    margin: 6px;
+}
