@@ -8,6 +8,8 @@
 }
 
 :root {
+  --font-family: "Rubik", italic;
+  --font-weight: 400;
   --text-color: rgb(255, 255, 255);
   --text-color-secondary: rgb(137, 128, 130);
   --accent-color: rgb(200, 105, 58);
