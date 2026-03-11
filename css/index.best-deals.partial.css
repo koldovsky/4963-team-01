@@ -1,0 +1,36 @@
+.best-deals__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .best-deals__subtitle {
+    font-size: 3rem;
+  }
+
+  .best-deals__paragraph {
+    margin-top: 20px;
+  }
+
+  .varieties__illustration {
+    margin-top: 25px;
+  }
+
+  .best-deals__carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+
+    .best-deals__carousel-items {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+
+      .best-deals__carousel-items__item {
+        width: 360px;
+      }
+    }
+  }
+}
