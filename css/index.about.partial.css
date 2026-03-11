@@ -18,15 +18,15 @@
 }
 
 .event-card {
-  background: url(/img/wines-about-cards/event-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+  background: url(../img/wines-about-cards/event-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
 }
 
 .addictives-card {
-  background: url(/img/wines-about-cards/addictives-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+  background: url(../img/wines-about-cards/addictives-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
 }
 
 .grape-card {
-  background: url(/img/wines-about-cards/grape-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+  background: url(../img/wines-about-cards/grape-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
 }
 
 .about-card__title {
@@ -65,7 +65,7 @@
 }
 
 .about-card__button::after {
-    content: url(/img/arrow.svg);
+    content: url(../img/arrow.svg);
     position: absolute;
     top: -4px;
     right: 0;

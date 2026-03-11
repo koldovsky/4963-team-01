@@ -1,5 +1,5 @@
 .hero {
-    background: url(/img/background-hero-partial.jpg) fixed no-repeat center center;
+    background: url(../img/background-hero-partial.jpg) fixed no-repeat center center;
     background-size: cover;
 }
 
@@ -30,7 +30,7 @@
 }   
 
 .hero__title::after {
-    content: url(/img/grape-logo-craft-wines.svg);
+    content: url(../img/grape-logo-craft-wines.svg);
     position: absolute;
     top: 98px;
     display: block;
