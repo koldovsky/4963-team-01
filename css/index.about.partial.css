@@ -30,7 +30,7 @@
 }
 
 .about-card__title {
-    font-family: var(--font-family-title);
+    font-family: var(--font-family-secondary);
     font-weight: var(--font-weight);
     font-size: 22px;
 }

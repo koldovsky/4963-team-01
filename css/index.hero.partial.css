@@ -16,14 +16,14 @@
 
 .hero__title {
     position: relative;
-    font-family: var(--font-family-title);
+    font-family: var(--font-family-secondary);
     font-weight: var(--font-weight);
     font-size: 84px;
     line-height: 140px;
 }
 
 .hero__subtitle {
-    font-family: var(--font-family-secondary);
+    font-family: var(--font-family-title);
     font-weight: var(--font-weight);
     font-size: 28px;
     color: var(--accent-color);
