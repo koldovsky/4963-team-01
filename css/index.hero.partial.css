@@ -69,3 +69,71 @@
 .hero__buttons-more {
     border: 2.4px solid var(--text-color);
 }
+
+@media (max-width: 767px) {
+  .hero {
+    background: url(/img/background-hero-partial.jpg) fixed no-repeat center
+      center;
+    background-size: cover;
+    background-position: 92.19% 49.67%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: transparent;
+
+    clip-path: inset(0px);
+    z-index: -1;
+    overflow: hidden;
+
+    --fixed-background-size: cover;
+    --fixed-background-color: #261e1c;
+    --fixed-transform: none;
+    --fixed-filter: undefined;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: var(--fixed-transform, none);
+    z-index: -1;
+    background-image: inherit;
+    background-color: var(--fixed-background-color, transparent);
+    background-repeat: inherit;
+    background-size: var(--fixed-background-size, cover);
+    background-position: inherit;
+    background-attachment: scroll;
+    filter: var(--fixed-filter, none);
+  }
+
+  .hero__container {
+    gap: 20px;
+    padding: 264px 25px 130px;
+  }
+  .hero__container > * {
+    width: 100%;
+  }
+  
+  .hero__title {
+    font-size: 58px;
+    line-height: 70px;
+  }
+  .hero__title::after {
+    top: 160px;
+  }
+  .hero__subtitle {
+    font-size: 14px;
+  }
+  .hero__quote {
+    margin-top: 72px;
+    line-height: 1.7;
+  }
+  .hero__buttons {
+    flex-direction: column;
+  }
+  .hero__buttons > * {
+    width: fit-content;
+  }
+}

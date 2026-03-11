@@ -1,5 +1,6 @@
 .nv {
     position: absolute;
+    z-index: 999;
     top: 0;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -57,4 +58,16 @@
 
 .bi-youtube {
     margin: 6px;
+}
+
+@media (max-width: 767px) {
+    .nv {
+        background: none;
+    }
+    .nv__menu {
+        display: none;
+    }
+    .nv__social {
+        display: none;
+    }
 }

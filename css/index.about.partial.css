@@ -76,3 +76,17 @@
     color: var(--text-color);
     fill: var(--text-color);
 }
+
+@media (max-width: 767px) {
+  .about {
+    padding: 90px 24px 60px;
+  }  
+  .about__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .about-card {
+    width: 272px;
+  }
+}
