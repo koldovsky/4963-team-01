@@ -1,12 +1,15 @@
 .nv {
+    position: absolute;
+    top: 0;
     background: rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
 .nv__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1200px;
+    width: var(--content-width);
     padding: 30px 15px;
 }
 
