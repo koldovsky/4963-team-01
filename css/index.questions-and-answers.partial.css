@@ -86,6 +86,12 @@ summary::-webkit-details-marker {
     font-family:'Prata', serif;
 }
 
+.faq__feature-line {
+    fill: none;
+    stroke: #c8693a; 
+    stroke-width: 2px;
+}
+
 .faq__feature-description {
     font-size: 16px;
     color: #898082;
