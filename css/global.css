@@ -19,11 +19,13 @@
   --text-color: rgb(255, 255, 255);
   --text-color-secondary: rgb(137, 128, 130);
   --accent-color: rgb(200, 105, 58);
+  --accent-color-dark: rgb(175, 87, 43);
   --background-color: rgb(38, 30, 28);
 
   background-color: var(--background-color);
   color: var(--text-color);
   scroll-behavior: smooth;
+  font-family: var(--font-family);
 }
 
 img {
