@@ -2,6 +2,8 @@
   display: block;
   padding-top: 110px;
   padding-bottom: 110px;
+  padding-left: 24px;
+  padding-right: 24px;
   background-image: url(../img/background-varieties-partial.png);
   background-position-x: 80.12%;
   background-position-y: 43.66%;
@@ -20,7 +22,7 @@
   .varieties__subtitle {
     font-family: var(--font-family-secondary);
     font-weight: var(--font-weight);
-    font-size: 48px;
+    font-size: 45px;
     color: var(--text-color);
     padding-bottom: 20px;
     margin-bottom: 5px;
