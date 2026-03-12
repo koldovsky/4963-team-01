@@ -11,6 +11,7 @@
     align-items: start;
 }
 
+
 .faq__content {
     max-width: 600px;
     padding-right: 1rem;
@@ -23,9 +24,8 @@
 .faq__subtitle {
     font-size: 48px;
 }
-
 .faq__image {
-    max-width: 550px;
+    max-width: 420px;
     width: 100%;
 }
 
@@ -59,7 +59,7 @@ summary::-webkit-details-marker {
 
 .faq__question[open] .faq__question-title::after {
     content: "-";
-}
+} 
 
 .faq__question-answer {
     padding: 10px 0 20px;
@@ -70,23 +70,60 @@ summary::-webkit-details-marker {
 
 .faq__features {
     margin-top: 80px;
-    display: grid;
+    display:grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
 .faq__feature-icon {
-    width: 40px;
+    width:40px;
     margin-bottom: 15px;
 }
 
 .faq__feature-title {
     margin: 10px auto;
     font-size: 22px;
-    font-family: 'Prata', serif;
+    font-family:'Prata', serif;
+}
+
+.faq__feature-line {
+    fill: none;
+    stroke: #c8693a; 
+    stroke-width: 2px;
 }
 
 .faq__feature-description {
     font-size: 16px;
     color: #898082;
 }
+
+@media (max-width: 478px) {
+    .faq__top {
+        display: flex;
+        flex-direction: column;
+    }
+    .faq__features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 479px) and (max-width: 767px) {
+    .faq__top {
+        display: flex;
+        flex-direction: column;
+    }
+    .faq__features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 990px) {
+    .faq__top {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+    .faq__features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
