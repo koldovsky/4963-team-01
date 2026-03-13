@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: var(--content-width);
     padding: 30px 15px;
 }
 
