@@ -1,113 +1,81 @@
 .hero {
-    background: url(../img/background-hero-partial.jpg) fixed no-repeat center center;
-    background-size: cover;
+  background: url(../img/background-hero-partial.jpg) fixed no-repeat center
+    center;
+  background-size: cover;
 }
 
 .hero__container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 322px 0 250px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 322px 0 250px 0;
 }
 
-.hero__container > *{
-    width: 57%;
+.hero__container > * {
+  width: 57%;
 }
 
 .hero__title {
-    position: relative;
-    font-family: var(--font-family-secondary);
-    font-weight: var(--font-weight);
-    font-size: 84px;
-    line-height: 140px;
+  position: relative;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight);
+  font-size: 84px;
+  line-height: 140px;
 }
 
 .hero__subtitle {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight);
-    font-size: 28px;
-    color: var(--accent-color);
-}   
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight);
+  font-size: 28px;
+  color: var(--accent-color);
+}
 
 .hero__title::after {
-    content: url(../img/grape-logo-craft-wines.svg);
-    position: absolute;
-    top: 98px;
-    display: block;
-    width: 166px;
-    height: 32px;
+  content: url(../img/grape-logo-craft-wines.svg);
+  position: absolute;
+  top: 98px;
+  display: block;
+  width: 166px;
+  height: 32px;
 }
 
 .hero__quote {
-    margin-top: 78px;
-    font-family: var(--font-family);
-    font-weight: var(--font-weight);
-    font-size: 18px;
+  margin-top: 78px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: 18px;
 }
 
 .hero__buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
 }
 
-.hero__buttons-shop, .hero__buttons-more {
-    font-family: var(--font-family);
-    font-size: 16.5px;
-    font-weight: 700;
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 15.6px 23.6px;
-    border-radius: 2px;
+.hero__buttons-shop,
+.hero__buttons-more {
+  font-family: var(--font-family);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 15.6px 23.6px;
+  border-radius: 2px;
 }
 
 .hero__buttons-shop {
-    background: var(--accent-color);
-    border: 2.4px solid var(--accent-color);
+  background: var(--accent-color);
+  border: 2.4px solid var(--accent-color);
 }
 
 .hero__buttons-more {
-    border: 2.4px solid var(--text-color);
+  border: 2.4px solid var(--text-color);
 }
 
 @media (max-width: 767px) {
   .hero {
-    background: url(/img/background-hero-partial.jpg) fixed no-repeat center
-      center;
-    background-size: cover;
-    background-position: 92.19% 49.67%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: transparent;
-
-    clip-path: inset(0px);
-    z-index: -1;
-    overflow: hidden;
-
-    --fixed-background-size: cover;
-    --fixed-background-color: #261e1c;
-    --fixed-transform: none;
-    --fixed-filter: undefined;
+    background-position: 0% 54.36%;
   }
-
-  .hero::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    transform: var(--fixed-transform, none);
-    z-index: -1;
-    background-image: inherit;
-    background-color: var(--fixed-background-color, transparent);
-    background-repeat: inherit;
-    background-size: var(--fixed-background-size, cover);
-    background-position: inherit;
-    background-attachment: scroll;
-    filter: var(--fixed-filter, none);
-  }
-
   .hero__container {
     gap: 20px;
     padding: 264px 25px 130px;
@@ -115,7 +83,7 @@
   .hero__container > * {
     width: 100%;
   }
-  
+
   .hero__title {
     font-size: 58px;
     line-height: 70px;
