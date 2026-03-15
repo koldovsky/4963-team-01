@@ -28,7 +28,7 @@
 }
 
 .faq__image {
-    max-width: 420px;
+    max-width: 470px;
     width: 100%;
 }
 
@@ -123,3 +123,8 @@ summary::-webkit-details-marker {
     }
 }
 
+@media (max-width: 1222px) {
+    .faq__question-title {
+      padding: 15px 10px;
+    }
+}
