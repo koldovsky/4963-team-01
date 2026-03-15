@@ -1,5 +1,6 @@
 @import "global.css";
 @import "components.css";
+@import "age-modal.partial.css";
 @import "global.header-nav.partial.css";
 @import "index.varieties.partial.css";
 @import "index.about.partial.css";
