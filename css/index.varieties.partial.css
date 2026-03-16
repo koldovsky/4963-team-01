@@ -28,7 +28,7 @@
     margin-bottom: 5px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 345px) {
     .varieties__title {
       font-size: 14px;
     }
@@ -38,6 +38,9 @@
     }
     .varieties__subtitle {
       font-size: 42px;
+    }
+    .varieties__description {
+      font-size: 10px;
     }
   }
 
