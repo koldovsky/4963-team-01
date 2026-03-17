@@ -21,7 +21,8 @@
   --accent-color: rgb(200, 105, 58);
   --accent-color-dark: rgb(175, 87, 43);
   --background-color: rgb(38, 30, 28);
-  --background-color-dark: #1a1512;
+  --background-color-dark: rgb(26, 21, 18);
+  --background-color-dark-gray: rgb(68, 68, 68);
   --burger-line-size: 2px;
 
   background-color: var(--background-color);
