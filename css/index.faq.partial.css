@@ -19,17 +19,23 @@
     font-size: clamp(14px, 0.8rem + 1.2vw, 28px);
     font-family: var(--font-family-title);
     color: var(--accent-color);
+    padding: 0 15px;
 }
 
 .faq__subtitle {
     font-size: 34px;
     font-family: var(--font-family-secondary);
     font-size: clamp(34px, 1.8rem + 1.6vw, 48px);
+    padding: 0 15px;
 }
 
 .faq__image {
     max-width: 470px;
     width: 100%;
+}
+
+.faq__illustration {
+    padding: 0 15px;
 }
 
 .faq__questions {
@@ -38,7 +44,7 @@
 
 .faq__question {
     border-bottom: 1px solid #444;
-    padding: 15px 0;
+    padding: 0 15px;
 }
 
 .faq__question-title {
@@ -75,6 +81,7 @@ summary::-webkit-details-marker {
 
 .faq__features {
     margin-top: 80px;
+    padding: 0 15px;
     display: grid;
     grid-template-columns: 1fr; 
     gap: 40px;
@@ -100,6 +107,7 @@ summary::-webkit-details-marker {
 .faq__feature-description {
     font-size: 16px;
     color: var(--text-color-secondary);
+    font-family: var(--font-family);
 }
 
 @media (min-width: 479px) {
