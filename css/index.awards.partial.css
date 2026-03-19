@@ -1,95 +1,118 @@
+/* Очищення відступів для всієї секції */
 .awards {
-    background-color: #1a1513; 
+    background-color: #171311; /* Темний шоколадний фон */
     color: #ffffff;
     padding: 80px 0;
     font-family: 'Rubik', sans-serif;
 }
 
+/* Центрування контенту */
 .awards__container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    text-align: center;
 }
 
+/* Шапка секції */
 .awards__header {
+    text-align: center;
     margin-bottom: 60px;
 }
 
-
+/* Напис Awards курсивом */
 .awards__subtitle {
-    font-family: 'Great Vibes', cursive; 
+    font-family: 'Great Vibes', cursive;
     color: #c9a050;
     font-size: 32px;
     margin-bottom: 10px;
+    display: block;
 }
 
+/* Головний заголовок */
 .awards__main-title {
     font-family: 'Prata', serif;
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
+/* Розділювач (виноград) */
 .awards__illustration {
-    max-width: 160px;
-    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 30px;
+    width: 160px;
 }
 
+/* Вступний текст */
 .awards__intro {
+    font-size: 18px;
     color: #b3b3b3;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* Сітка нагород */
+/* СІТКА НАГОРОД (Grid) — саме це виправить "злипання" */
 .awards__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    text-align: left;
-    margin-top: 40px;
+    grid-template-columns: 1fr 1fr; /* Робимо рівно дві колонки */
+    gap: 60px 40px; /* Відступи між картками */
+    margin-top: 60px;
 }
 
+/* Кожна окрема картка нагороди */
 .awards__item {
-    display: flex;
-    gap: 20px;
+    display: flex; /* Логотип зліва, текст справа */
+    gap: 25px;
     align-items: flex-start;
 }
 
+/* Обгортка для логотипу */
 .awards__logo-wrapper {
     flex-shrink: 0;
-    width: 100px;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.03); /* Легка підкладка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .awards__logo {
-    max-width: 100%;
-    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(15deg); 
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
 }
 
+/* Текстовий блок нагороди */
 .awards__item-title {
     font-family: 'Prata', serif;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 
 .awards__year {
-    color: #c9a050;
-    font-weight: bold;
     display: block;
-    margin-bottom: 10px;
+    color: #c9a050;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
 .awards__description {
     font-size: 14px;
     color: #a0a0a0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Адаптація для мобільних */
-@media (max-width: 768px) {
+/* АДАПТИВНІСТЬ: на мобілках ставимо все в одну колонку */
+@media (max-width: 992px) {
     .awards__list {
         grid-template-columns: 1fr;
     }
+    
     .awards__main-title {
         font-size: 32px;
     }
