@@ -1,0 +1,97 @@
+/* СТИЛІ ДЛЯ СЕКЦІЇ AWARDS */
+.awards {
+    background-color: #1a1513; 
+    color: #ffffff;
+    padding: 80px 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.awards__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.awards__header {
+    margin-bottom: 60px;
+}
+
+
+.awards__subtitle {
+    font-family: 'Great Vibes', cursive; 
+    color: #c9a050;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.awards__main-title {
+    font-family: 'Prata', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.awards__illustration {
+    max-width: 160px;
+    margin-bottom: 20px;
+}
+
+.awards__intro {
+    color: #b3b3b3;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Сітка нагород */
+.awards__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.awards__item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.awards__logo-wrapper {
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.awards__logo {
+    max-width: 100%;
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(15deg); 
+}
+
+.awards__item-title {
+    font-family: 'Prata', serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.awards__year {
+    color: #c9a050;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.awards__description {
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* Адаптація для мобільних */
+@media (max-width: 768px) {
+    .awards__list {
+        grid-template-columns: 1fr;
+    }
+    .awards__main-title {
+        font-size: 32px;
+    }
+}
