@@ -1,8 +1,7 @@
-/* --- СЕКЦІЯ НАГОРОД (АНДРІЙ ОЛІЙНИК) --- */
 .awards {
     background-color: #1a1513; 
     color: #ffffff;
-    padding: 80px 0;
+    padding: 100px 0;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -20,99 +19,80 @@
 .awards__subtitle {
     font-family: 'Great Vibes', cursive;
     color: #c9a050;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
 .awards__main-title {
     font-family: 'Prata', serif;
-    font-size: 48px;
+    font-size: 52px;
     margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-transform: none; /* На макеті не капсом, а просто великі літери */
 }
 
-.awards__illustration {
-    display: block;
-    margin: 0 auto 30px;
-    width: 160px;
+.awards__divider img {
+    width: 140px;
+    margin-bottom: 40px;
 }
 
 .awards__intro {
-    font-size: 18px;
-    color: #b3b3b3;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 17px;
+    color: #ffffff;
+    opacity: 0.9;
 }
 
-/* ЗАГАЛЬНИЙ СПИСОК НАГОРОД */
-.awards__list {
-    margin-top: 50px;
-}
-
-/* КОЖНА НАГОРОДА - РОБИМО ГРИД, щоб опис був ширшим */
+/* СТРУКТУРА КАРТКИ */
 .awards__item {
     display: grid;
-    /* Перша колонка вужча (40%), друга ширша (60%) */
-    grid-template-columns: 4fr 6fr;
-    gap: 20px 60px; /* Відступ між колонками та рядками */
-    margin-bottom: 60px;
-    align-items: center; /* Центруємо лого і текст по вертикалі */
+    /* Чіткі пропорції як на фото */
+    grid-template-columns: 140px 220px 100px 1fr;
+    gap: 20px;
+    align-items: start; /* Текст опису зазвичай вирівнюється по верху */
+    margin-bottom: 40px;
 }
 
-/* ГОРИЗОНТАЛЬНИЙ РЯДОК ЗЛІВА */
-.awards__item-header {
-    display: flex; /* Створюємо Flexbox всередині Гріда */
+.awards__logo-col {
+    background-color: #211c1a; /* Темний фон під лого як на скріншоті */
+    width: 130px;
+    height: 90px;
+    display: flex;
     align-items: center;
-    gap: 30px; /* Відступ між логотипом, назвою та роком */
+    justify-content: center;
 }
 
-.awards__logo-wrapper {
-    flex-shrink: 0;
-    width: 100px;
-    text-align: center;
+.awards__logo-col img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
 }
 
-.awards__logo {
-    max-width: 100%;
-    /* Робимо лого білим, якщо воно чорне */
-    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(15deg);
-}
-
-.awards__item-title {
+.awards__item-name {
     font-family: 'Prata', serif;
-    font-size: 18px;
+    font-size: 19px;
+    line-height: 1.3;
     color: #ffffff;
-    line-height: 1.4;
 }
 
 .awards__year {
-    color: #c9a050; /* ЗОЛОТИЙ КОЛІР */
-    font-size: 20px;
-    font-weight: 500;
-}
-
-/* БЛОК ОПИСУ СПРАВА */
-.awards__content {
-    align-self: flex-start; /* Опис починається зверху */
+    font-family: 'Prata', serif; /* Цифри року теж зазвичай з засічками */
+    font-size: 24px;
+    color: #ffffff;
 }
 
 .awards__description {
-    font-size: 14px;
-    color: #a0a0a0;
+    font-size: 15px;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6); /* Сіруватий колір для тексту */
 }
 
-/* АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ */
-@media (max-width: 768px) {
+/* МОБІЛЬНА ВЕРСІЯ (все в одну колонку) */
+@media (max-width: 850px) {
     .awards__item {
-        grid-template-columns: 1fr; /* Ставимо в одну колонку */
-        gap: 20px;
-    }
-    
-    .awards__item-header {
-        flex-direction: column; /* Елементи один під одним */
-        align-items: center;
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 15px;
+    }
+    .awards__logo-col {
+        margin: 0 auto;
     }
 }
