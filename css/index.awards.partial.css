@@ -1,4 +1,3 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,50 +5,43 @@
 }
 
 body {
-    background-color: #1a1716; 
+    background-color: #1a1716;
     color: #ffffff;
     line-height: 1.6;
     font-family: 'Prata', serif;
 }
 
 .container {
-    max-width: 1200px; /* Трохи ширше для відповідності макету */
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
-/* SECTION AWARDS */
-.awards {
-    padding: 120px 0;
-}
-
+/* ШАПКА СЕКЦІЇ */
 .awards__header {
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
+    padding-top: 100px;
 }
 
 .awards__subtitle {
     font-family: 'Great Vibes', cursive;
     color: #C8693A;
-    font-size: 38px;
-    margin-bottom: 5px;
+    font-size: 32px;
 }
 
 .awards__title {
-    font-size: 56px;
+    font-size: 52px;
     font-weight: 400;
-    margin: 10px 0;
-}
-
-.divider {
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 .divider img {
-    width: 120px;
+    width: 140px;
+    margin: 10px 0;
 }
 
-.awards__desc {
+.awards__header-desc {
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
@@ -57,30 +49,28 @@ body {
     margin: 0 auto;
 }
 
-/* AWARDS LIST */
-.awards__list {
-    margin-top: 40px;
-}
-
+/* КАРТКА НАГОРОДИ — ОСНОВНІ ВИПРАВЛЕННЯ ТУТ */
 .award {
     display: grid;
-    /* Лого: 180px, Назва: 280px, Опис: все інше */
-    grid-template-columns: 180px 280px 1fr; 
-    gap: 40px 60px;
+    /* Чіткі розміри: Лого(180) | Назва(220) | Опис(решта) */
+    grid-template-columns: 180px 220px 1fr;
+    /* 100px — простір між назвою та описом як на макеті */
+    gap: 0 100px; 
     padding: 50px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    align-items: center; /* Центрування по вертикалі */
+    /* ВИРІВНЮВАННЯ ПО ВЕРХНЬОМУ КРАЮ */
+    align-items: start; 
 }
 
-/* Прибираємо верхню лінію у першого елемента */
 .award:first-of-type {
     border-top: none;
 }
 
+/* ЛОГОТИП */
 .award__logo-box {
-    background-color: #24201e;
+    background-color: #211c1a;
     width: 180px;
-    height: 110px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,30 +82,36 @@ body {
     opacity: 0.8;
 }
 
+/* НАЗВА ТА РІК */
 .award__info-col {
     display: flex;
     flex-direction: column;
 }
 
 .award__name {
-    font-size: 22px;
-    font-weight: 400;
+    font-size: 19px;
     line-height: 1.3;
-    margin-bottom: 8px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: #ffffff;
 }
 
 .award__year {
-    font-size: 36px;
-    color: #FFFFFF;
+    font-size: 42px;
+    color: #ffffff;
     font-family: 'Prata', serif;
+    line-height: 1;
 }
 
+/* ОПИС — ТЕКСТ ПРАВОРУЧ */
 .award__description {
     font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.5); /* Більш прозорий текст як на макеті */
-    max-width: 520px;
+    color: rgba(255, 255, 255, 0.45); /* Сірий колір як на картинці */
+    max-width: 500px;
+    margin: 0;
+    text-align: left;
 }
 
 /* АДАПТИВНІСТЬ */
@@ -124,9 +120,6 @@ body {
         grid-template-columns: 180px 1fr;
         gap: 30px;
     }
-    .award__text-col {
-        grid-column: 2;
-    }
 }
 
 @media (max-width: 768px) {
@@ -134,10 +127,6 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    .award__logo-box {
-        margin: 0 auto;
-    }
-    .award__description {
-        margin: 0 auto;
-    }
+    .award__logo-box { margin: 0 auto 20px; }
+    .award__description { margin: 0 auto; }
 }
