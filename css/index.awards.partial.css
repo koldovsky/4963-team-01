@@ -1,113 +1,112 @@
-/* Секція Awards */
 .awards {
-    background-color: #1e1614;
-    padding: 100px 0;
-    color: #a5a5a5;
+  background-color: #1e1614;
+  padding: 80px 0;
+  color: #a5a5a5;
+  font-family: Arial, sans-serif; /* Базовий шрифт, якщо Playfair не підключено */
 }
 
-/* Заголовок */
 .awards-header {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.awards-subtitle-img {
-    height: 30px;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .awards-main-title {
-    font-family: 'Playfair Display', serif; /* Переконайтеся, що шрифт підключено */
-    font-size: 48px;
-    color: #ffffff;
-    margin: 10px 0;
-    font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #ffffff;
+  margin: 15px 0;
+  font-weight: 400;
 }
 
 .awards-divider {
-    display: block;
-    margin: 25px auto;
-    width: 180px;
+  display: block;
+  margin: 20px auto;
+  max-width: 180px;
 }
 
 .awards-intro {
-    font-size: 18px;
-    color: #ffffff;
-    max-width: 650px;
-    margin: 0 auto;
-    font-weight: 300;
+  font-size: 18px;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Список */
+/* Контейнер рядка */
 .award-item {
-    display: flex;
-    align-items: center;
-    padding: 45px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  padding: 35px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 40px;
 }
 
 .award-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
-/* Логотип */
-.award-logo {
-    flex: 0 0 180px;
+/* Колонки з фіксованою шириною для рівного вигляду */
+.award-col-1 {
+  flex: 0 0 160px; /* Ширина для логотипів */
+  display: flex;
+  justify-content: flex-start;
 }
 
-.award-logo img {
-    max-width: 100%;
-    filter: brightness(0.9);
+.award-col-1 img {
+  max-width: 140px;
+  height: auto;
 }
 
-/* Назва + Рік */
-.award-info {
-    flex: 0 0 320px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.award-col-2 {
+  flex: 0 0 320px; /* Ширина для назви та року */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.award-col-3 {
+  flex: 1; /* Опис займає весь вільний простір */
+}
+
+/* Стилі тексту */
 .award-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    color: #ffffff;
-    margin: 0;
-    line-height: 1.3;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-size: 19px;
+  margin: 0;
+  line-height: 1.3;
 }
 
 .award-year {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    color: #ffffff;
-    font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-left: 20px;
 }
 
-/* Опис */
-.award-description {
-    flex: 1;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #888888;
+.award-col-3 p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #888888;
 }
 
-/* Адаптивність (Mobile) */
+/* Адаптація для планшетів та телефонів */
 @media (max-width: 991px) {
-    .award-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
+  .award-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .award-col-2 {
+    flex: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .award-info {
-        flex: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .award-year {
-        margin-left: 0;
-    }
+  .award-year {
+    margin-left: 0;
+  }
 }
