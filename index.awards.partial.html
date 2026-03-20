@@ -3,48 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wine Awards</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Awards Block</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Загальні стилі */
+        :root {
+            --bg-dark: #1e1614; /* Темний колір фону */
+            --accent: #c58d5d;  /* Золотисто-коричневий для акцентів */
+            --text-light: #ffffff;
+            --text-gray: #a5a5a5;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-gray);
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        /* Шапка секції */
+        .awards-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .subtitle-img {
+            display: block;
+            margin: 0 auto 15px;
+            max-width: 120px;
+        }
+
+        .awards-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: var(--text-light);
+            margin: 0 0 20px;
+            font-weight: 400;
+        }
+
+        .divider-img {
+            display: block;
+            margin: 0 auto 30px;
+            width: 180px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-light);
+        }
+
+        /* Список нагород */
+        .awards-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .award-item {
+            display: flex;
+            align-items: center;
+            padding: 45px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            gap: 40px;
+        }
+
+        .award-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Логотипи (ліва частина) */
+        .award-logo {
+            flex: 0 0 180px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .award-logo img {
+            max-width: 100%;
+            height: auto;
+            opacity: 0.9;
+        }
+
+        /* Назва та рік (середня частина) */
+        .award-info {
+            flex: 0 0 320px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .award-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .award-year {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: var(--text-light);
+            font-weight: 700;
+            margin-left: 20px;
+        }
+
+        /* Текст (права частина) */
+        .award-description {
+            flex: 1;
+            font-size: 16px;
+            color: #888;
+        }
+
+        /* Адаптація під мобільні пристрої */
+        @media (max-width: 992px) {
+            .award-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .award-info {
+                flex: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .award-year {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<section class="awards">
-    <div class="container">
-        
-        <header class="awards__header">
-            <p class="awards__subtitle">Awards</p>
-            <h2 class="awards__title">Our Wines Are Our Pride</h2>
-            <div class="divider">
-                <img src="img/grape-divider.svg" alt="divider">
-            </div>
-            <p class="awards__header-desc">
-                The excellence of our wines has been proved by the following awards.
-            </p>
-        </header>
-
-        <div class="awards__list">
-            <article class="award">
-                <div class="award__logo-col">
-                    <div class="award__logo-box">
-                        <img src="img/fine-wines-1956.png" alt="Fine Wines" class="award__logo-img">
-                    </div>
-                </div>
-                
-                <div class="award__info-col">
-                    <h3 class="award__name">The Best Craft <br> Wine in <br> California</h3>
-                    <span class="award__year">1956</span>
-                </div>
-                
-                <div class="award__text-col">
-                    <p class="award__description">
-                        Our Sauvignon Blanc wine was entered for the first time in a competition and immediately received this award. Experts noted the amazing aroma and luxurious taste of our wine. This award has become an important impetus for the development of our company.
-                    </p>
-                </div>
-            </article>
+    <section class="container">
+        <div class="awards-header">
+            <img src="img/awards-subtitle.png" alt="Awards Subtitle" class="subtitle-img">
+            <h2>Our Wines Are Our Pride</h2>
+            <img src="img/awards-divider.png" alt="Divider" class="divider-img">
+            <p class="intro-text">The excellence of our wines has been proved by the following awards.</p>
         </div>
-    </div>
-</section>
 
-</body>
-</html>
+        <div class="awards-list">
+            
+            <div class="award-item">
+                <div class="award-logo">
+                    <img src="img/fine-wines-1956.png" alt="Fine Wines">
+                </div>
+                <div class="award-info">
+                    <h3>The Best Craft Wine <br> in California</h3>
+                    <span class="award-year">1956</span>
+                </div>
+                <p class="award-description">
+                    Our Sauvignon Blanc wine was entered for the first time in a competition and immediately received this award. Experts noted the amazing aroma and luxurious taste of our wine. This award has become an important impetus for the development of our company.
+                </p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-logo">
+                    <img src="img/orange-wine-fund-1992.png" alt="Orange Wine Fund">
+                </div>
+                <div class="award-info">
+                    <h3>The Most Intense <br> Red Wine</h3>
+                    <span class="award-year">1992</span>
+                </div>
+                <p class="award-description">
+                    In 1992, in conditions of very tough competition from winemakers in our state, our wine managed to take first place. It was preferred by most critics of Orange Wine Fund. They noted the bright and rich taste of our Pinot Noir, its ruby color, and intense aroma.
+                </p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-logo">
+                    <img src="img/the-wine-corporation-2016.png" alt="The Wine Corporation">
+                </div>
+                <div class="award-info">
+                    <h3>Year's Best <br> Chardonnay</h3>
+                    <span class="award-year">2016</span>
+                </div>
+                <p class="award-description">
+                    Our Chardonnay got a gold medal at the Wine Corporation Annual Contest. Our wine scored the highest number of points - 99 out of 100 possible, and was rated by experts and critics as "amazing". By the way, a few bottles of Chardonnay produced in 2016 are still on sale.
+                </p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-logo">
+                    <img src="img/wine-finds-2022.png" alt="Wine Finds">
+                </div>
+                <div class="award-info">
+                    <h3>The Best American <br> Riesling</h3>
+                    <span class="award-year">2022</span>
+                </div>
+                <p class="award-description">
+                    In 2022, our wine was presented in this competition among all
