@@ -22,10 +22,12 @@
 }
 
 .awards-main-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Prata', serif;
   font-size: 48px;
-  color: #ffffff;
-  margin: 10px 0;
+  color: #FFFFFF;
+  line-height: 1.35;
+  max-width: 565px; /* Ваша ширина з макета */
+  margin: 10px auto;
   font-weight: 400;
 }
 
