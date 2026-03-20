@@ -1,5 +1,5 @@
 .awards {
-  background-color: #1D1110 !important;
+   background-color: #160C0B !important; 
   padding: 100px 0;
   color: #a5a5a5;
   font-family: 'Rubik', sans-serif;
@@ -9,6 +9,7 @@
 .awards-header {
   text-align: center;
   margin-bottom: 80px;
+  /* Додаємо прозорість, щоб не перекривати новий фон */
   background-color: transparent !important;
 }
 
