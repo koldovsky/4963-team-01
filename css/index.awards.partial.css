@@ -1,5 +1,5 @@
 .awards {
-   background-color: #160C0B !important; 
+  background-color: #130A09 !important; /* ТУТ ЗМІНЕНО: тепер фон сайту ідеально збігається з фоном картинки */
   padding: 100px 0;
   color: #a5a5a5;
   font-family: 'Rubik', sans-serif;
@@ -9,7 +9,6 @@
 .awards-header {
   text-align: center;
   margin-bottom: 80px;
-  /* Додаємо прозорість, щоб не перекривати новий фон */
   background-color: transparent !important;
 }
 
