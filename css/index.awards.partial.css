@@ -1,14 +1,15 @@
 .awards {
-  background-color: #1D1110 !important; 
+  background-color: #1D1110 !important;
   padding: 100px 0;
   color: #a5a5a5;
   font-family: 'Rubik', sans-serif;
+  display: block;
 }
 
-/* ШАПКА */
 .awards-header {
   text-align: center;
   margin-bottom: 80px;
+  background-color: transparent !important;
 }
 
 .awards-label {
