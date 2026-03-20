@@ -29,12 +29,13 @@
   font-weight: 400;
   text-align: center;
   margin: 10px auto;
-  white-space: nowrap;
-  max-width: none;
   display: block;
+  width: 100%;
+  max-width: none;
+  white-space: nowrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .awards-main-title {
     white-space: normal;
     font-size: 32px;
