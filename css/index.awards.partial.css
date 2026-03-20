@@ -5,16 +5,19 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* ШАПКА ТА ЦЕНТРУВАННЯ */
+/* ШАПКА */
 .awards-header {
   text-align: center;
   margin-bottom: 80px;
 }
 
-.awards-subtitle {
-  display: block; /* Робимо блоковим для центрування */
-  margin: 0 auto 15px auto; /* Вирівнювання посередині */
-  height: 30px;
+.awards-label {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  color: #c58d5d; /* Золотистий колір */
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
 .awards-main-title {
@@ -35,16 +38,16 @@
   font-size: 18px;
   color: #ffffff;
   font-style: italic;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
 }
 
-/* СПИСОК ТА ВИРІВНЮВАННЯ КОЛОНОК */
+/* СПИСОК ТА ВИРІВНЮВАННЯ */
 .award-item {
   display: flex;
   align-items: center;
   padding: 40px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   gap: 40px;
 }
 
@@ -63,9 +66,9 @@
   max-width: 140px;
 }
 
-/* Друга колонка: Назва (Курсив) + Рік (Жирний) */
+/* Друга колонка: Назва (Курсив) + Рік */
 .award-col-2 {
-  flex: 0 0 380px; /* Фіксована ширина для ідеальної вертикальної лінії */
+  flex: 0 0 380px; /* Фіксуємо ширину для рівності опису */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -74,9 +77,9 @@
 
 .award-name {
   font-family: 'Playfair Display', serif;
-  color: #c58d5d; /* Золотистий колір */
+  color: #c58d5d;
   font-size: 20px;
-  font-style: italic; /* Курсив як на макеті */
+  font-style: italic; /* Курсив для назви */
   margin: 0;
   line-height: 1.2;
   flex: 1;
@@ -98,10 +101,11 @@
   margin: 0;
   font-size: 15px;
   line-height: 1.7;
-  color: #999;
+  color: #b0b0b0;
+  font-weight: 300;
 }
 
-/* МОБІЛЬНА ВЕРСІЯ */
+/* АДАПТИВНІСТЬ */
 @media (max-width: 991px) {
   .award-item {
     flex-direction: column;
@@ -113,5 +117,8 @@
     width: 100%;
     justify-content: center;
     gap: 15px;
+  }
+  .award-year {
+    margin-left: 0;
   }
 }
