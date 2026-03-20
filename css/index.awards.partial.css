@@ -26,9 +26,19 @@
   font-size: 48px;
   color: #FFFFFF;
   line-height: 1.35;
-  max-width: 565px; /* Ваша ширина з макета */
-  margin: 10px auto;
   font-weight: 400;
+  text-align: center;
+  margin: 10px auto;
+  white-space: nowrap;
+  max-width: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .awards-main-title {
+    white-space: normal;
+    font-size: 32px;
+  }
 }
 
 .awards-divider {
