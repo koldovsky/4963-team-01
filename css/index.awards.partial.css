@@ -1,4 +1,4 @@
-/* RESET та Базові Стилі */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,16 @@
 }
 
 body {
-    background-color: #1a1716; /* Темний шоколадний фон */
+    background-color: #1a1716;
     color: #ffffff;
     line-height: 1.6;
     font-family: 'Prata', serif;
-    -webkit-font-smoothing: antialiased; /* Покращення відображення на Mac */
 }
 
-/* CONTAINER */
 .container {
-    max-width: 1200px; /* Трохи ширше для преміальності */
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 /* SECTION AWARDS */
@@ -25,35 +23,29 @@ body {
     padding: 100px 0;
 }
 
-/* HEADER Стилізація */
 .awards__header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 
 .awards__subtitle {
     font-family: 'Great Vibes', cursive;
-    color: #C8693A; /* Золотисто-коричневий колір підпису */
-    font-size: 38px;
-    margin-bottom: 5px;
+    color: #C8693A;
+    font-size: 32px;
 }
 
 .awards__title {
-    font-size: 56px;
+    font-size: 52px;
     font-weight: 400;
-    margin: 10px 0;
-    letter-spacing: 1px;
-}
-
-.divider {
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 .divider img {
     width: 130px;
+    margin: 10px 0;
 }
 
-.awards__header-desc {
+.awards__desc {
     font-family: Arial, sans-serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
@@ -61,30 +53,25 @@ body {
     margin: 0 auto;
 }
 
-/* AWARDS LIST та Елементи */
-.awards__list {
-    margin-top: 50px;
-}
-
+/* AWARDS LIST - ГОЛОВНІ ВИПРАВЛЕННЯ ТУТ */
 .award {
     display: grid;
-    /* Трьохколонкова сітка: Logo (180px) | Name & Year (300px) | Text (залишок) */
-    grid-template-columns: 180px 300px 1fr;
-    /* Великі відступи для вільного простору як на макеті */
-    gap: 40px 90px; 
-    padding: 60px 0;
+    /* Лого: 180px | Назва: 220px | Опис: решта (1fr) */
+    grid-template-columns: 180px 220px 1fr;
+    /* 100px - це той самий великий відступ перед описом з макета */
+    gap: 40px 100px; 
+    padding: 50px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    align-items: start; /* Вирівнювання по верхньому краю, а не центру */
+    /* Вирівнювання по ВЕРХНЬОМУ краю, щоб текст не "плавав" по центру */
+    align-items: start; 
 }
 
-/* Прибираємо верхню лінію у першого елемента */
 .award:first-of-type {
     border-top: none;
 }
 
-/* КОЛОНКА 1: ЛОГОТИП */
 .award__logo-box {
-    background-color: #24201e; /* Світліший темний фон під лого */
+    background-color: #211c1a;
     width: 180px;
     height: 110px;
     display: flex;
@@ -93,75 +80,53 @@ body {
 }
 
 .award__logo-img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 75%;
+    filter: brightness(0) invert(1);
     opacity: 0.8;
 }
 
-/* КОЛОНКА 2: НАЗВА ТА РІК */
-.award__title-col {
+.award__info-col {
     display: flex;
     flex-direction: column;
 }
 
 .award__name {
-    font-family: 'Prata', serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.3;
     margin-bottom: 15px;
+    /* Обмежуємо ширину, щоб назва була в кілька рядків як на макеті */
+    max-width: 200px; 
 }
 
 .award__year {
-    font-family: 'Prata', serif;
-    font-size: 48px; /* Великий рік як на макеті */
-    color: #ffffff;
+    font-size: 42px;
+    color: #FFFFFF;
     line-height: 1;
 }
 
-/* КОЛОНКА 3: ОПИС */
 .award__description {
     font-family: Arial, sans-serif;
-    font-size: 14px; /* Менший розмір тексту опису */
-    line-height: 2; /* Великий інтервал між рядками */
-    color: rgba(255, 255, 255, 0.5); /* Сірий, приглушений текст опису */
-    max-width: 520px; /* Обмеження ширини тексту, щоб він не розтягувався */
-    margin-top: 5px; /* Невеличкий відступ зверху, щоб текст починався нижче назви */
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.45); /* Текст світліший і дрібніший */
+    max-width: 520px;
+    margin: 0;
 }
 
-/* АДАПТИВНІСТЬ (Для мобільних пристроїв та планшетів) */
+/* АДАПТИВНІСТЬ */
 @media (max-width: 1024px) {
     .award {
         grid-template-columns: 180px 1fr;
         gap: 30px;
     }
-    /* Розташовуємо текст під лого на планшетах */
-    .award__description-col {
-        grid-column: 2;
-        margin-top: -20px;
-    }
 }
 
 @media (max-width: 768px) {
     .award {
-        grid-template-columns: 1fr; /* Одноколонкова сітка на телефонах */
+        grid-template-columns: 1fr;
         text-align: center;
-        gap: 20px;
     }
-    .award__logo-box {
-        margin: 0 auto;
-    }
-    .award__title-col {
-        align-items: center;
-    }
-    .award__description-col {
-        grid-column: 1;
-        margin-top: 0;
-    }
-    .award__description {
-        margin: 0 auto;
-    }
-    .awards__title {
-        font-size: 42px;
-    }
+    .award__logo-box { margin: 0 auto 20px; }
+    .award__description { margin: 0 auto; }
 }
