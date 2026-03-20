@@ -21,6 +21,7 @@
   font-weight: var(--font-weight);
   font-size: 84px;
   line-height: 140px;
+  word-break: break-word;
 }
 
 .hero__subtitle {
@@ -72,7 +73,7 @@
   border: 2.4px solid var(--text-color);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .hero {
     background-position: 0% 54.36%;
   }
@@ -80,19 +81,16 @@
     gap: 20px;
     padding: 264px 25px 130px;
   }
-  .hero__container > * {
-    width: 100%;
-  }
 
   .hero__title {
-    font-size: 58px;
-    line-height: 70px;
+    font-size: 70px;
+    line-height: 91px;
   }
   .hero__title::after {
     top: 160px;
   }
   .hero__subtitle {
-    font-size: 14px;
+    font-size: 21px;
   }
   .hero__quote {
     margin-top: 72px;
@@ -103,5 +101,27 @@
   }
   .hero__buttons > * {
     width: fit-content;
+  }
+}
+
+@media (max-width: 1025px) {
+  .hero__title {
+    line-height: 107px;
+  }
+  .hero__title::after{
+    top: 180px;
+  }
+}
+
+@media (max-width: 426px) {
+  .hero__container > * {
+    width: 100%;
+  }
+  .hero__title {
+    font-size: 58px;
+    line-height: 74px;
+  }
+  .hero__subtitle {
+    font-size: 14px;
   }
 }

@@ -62,9 +62,13 @@
   margin: 6px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .nv {
     background: none;
+  }
+
+  .nv__container {
+    padding: 30px 32px;
   }
 
   .nv__logo {
@@ -173,5 +177,17 @@
 
   .nv__menu-toggle:checked ~ .nv__container {
     background-color: var(--background-color);
+  }
+}
+
+@media (max-width: 1025px) {
+  .nv__container {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 426px) {
+  .nv__container {
+    padding: 30px 24px;
   }
 }
