@@ -13,11 +13,12 @@
 
 .awards-label {
   display: block;
-  font-family: 'Playfair Display', serif;
-  color: #c58d5d; /* Золотистий колір */
-  font-size: 22px;
-  font-style: italic;
-  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  color: #C8693A;                      
+  font-size: 28px;                     
+  margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .awards-main-title {
