@@ -36,10 +36,10 @@
 
 .awards-divider {
   display: block;
-  margin: 30px auto;
-  width: 100%;
-  max-width: 450px;
-  height: auto;
+  margin: 30px auto;      
+  width: 100%;           
+  max-width: 100px;      
+  height: auto;          
 }
 
 .awards-intro {
