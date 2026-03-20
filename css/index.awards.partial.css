@@ -36,18 +36,22 @@
 
 .awards-divider {
   display: block;
-  margin: 25px auto; /* Це створить рівні проміжки: заголовок <-> лого <-> текст */
-  max-width: 80px;   /* Підберіть цей розмір, щоб лого виглядало акуратно */
+  margin: 30px auto;
+  width: 100%;
+  max-width: 450px;
   height: auto;
 }
 
 .awards-intro {
+  font-family: 'Rubik', sans-serif;
   font-size: 18px;
   color: #ffffff;
   font-style: italic;
+  font-weight: 300;
+  line-height: 1.6;
   max-width: 650px;
   margin: 0 auto;
-  text-align: center; /* Додайте це для впевненості */
+  text-align: center;
 }
 
 /* СПИСОК ТА ВИРІВНЮВАННЯ */
