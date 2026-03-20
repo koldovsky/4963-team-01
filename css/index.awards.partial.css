@@ -29,30 +29,16 @@
   line-height: 1.35;
   font-weight: 400;
   text-align: center;
-  margin: 10px auto;
+  margin: 10px auto 0; /* Прибираємо нижній margin, бо його дасть картинка */
   display: block;
   width: 100%;
-  max-width: none;
-  white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-  .awards-main-title {
-    white-space: normal;
-    font-size: 32px;
-  }
 }
 
 .awards-divider {
-  font-family: 'Rubik', sans-serif;
-  font-size: 18px;
-  color: #FFFFFF;
-  max-width: 564px; 
-  min-height: 65px; 
-  margin: 0 auto;
-  line-height: 1.6;
-  font-weight: 300;
-  
+  display: block;
+  margin: 25px auto; /* Це створить рівні проміжки: заголовок <-> лого <-> текст */
+  max-width: 80px;   /* Підберіть цей розмір, щоб лого виглядало акуратно */
+  height: auto;
 }
 
 .awards-intro {
@@ -61,6 +47,7 @@
   font-style: italic;
   max-width: 650px;
   margin: 0 auto;
+  text-align: center; /* Додайте це для впевненості */
 }
 
 /* СПИСОК ТА ВИРІВНЮВАННЯ */
