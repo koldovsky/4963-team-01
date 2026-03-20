@@ -1,4 +1,4 @@
-/* RESET */
+/* 1. СКИДАННЯ ТА БАЗОВІ СТИЛІ */
 * {
     margin: 0;
     padding: 0;
@@ -6,126 +6,157 @@
 }
 
 body {
-    background-color: #1a1716;
+    background-color: #1a1716; /* Глибокий темний фон */
     color: #ffffff;
     line-height: 1.6;
     font-family: 'Prata', serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-/* SECTION AWARDS */
+/* 2. СЕКЦІЯ AWARDS */
 .awards {
     padding: 100px 0;
 }
 
+/* ЗАГОЛОВОК СЕКЦІЇ */
 .awards__header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 
 .awards__subtitle {
     font-family: 'Great Vibes', cursive;
-    color: #C8693A;
-    font-size: 32px;
+    color: #C8693A; /* Теплий теракотовий колір */
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .awards__title {
     font-size: 52px;
-    margin: 15px 0;
     font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    margin: 20px 0;
 }
 
 .divider img {
-    width: 140px;
-    margin: 10px 0;
+    width: 130px;
+    height: auto;
 }
 
-.awards__desc {
+.awards__header-desc {
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
-/* КАРТКА НАГОРОДИ */
+/* 3. СПИСОК ТА КАРТКИ НАГОРОД */
+.awards__list {
+    margin-top: 60px;
+}
+
 .award {
     display: grid;
-    /* Лого: 160px | Назва: 240px | Опис: решта */
-    grid-template-columns: 160px 240px 1fr;
-    gap: 60px; 
-    padding: 45px 0;
+    /* СІТКА: Лого (180px) | Назва+Рік (260px) | Опис (залишок) */
+    grid-template-columns: 180px 260px 1fr;
+    gap: 40px 80px; /* Великий відступ між колонками для простору */
+    padding: 50px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    align-items: start; /* Вирівнювання по верхньому краю */
+    align-items: start; /* Вирівнювання по верхньому краю як на макеті */
+}
+
+/* Прибираємо лінію над першою нагородою */
+.award:first-of-type {
+    border-top: none;
 }
 
 /* ЛОГОТИП */
 .award__logo-box {
-    background-color: #211c1a;
-    width: 160px;
-    height: 100px;
+    background-color: #24201e;
+    width: 180px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .award__logo-img {
-    max-width: 70%;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    max-width: 75%;
+    max-height: 75%;
+    filter: brightness(0) invert(1); /* Робимо лого білими */
+    opacity: 0.8;
 }
 
-/* НАЗВА ТА РІК (Центральна колонка) */
+/* ЦЕНТРАЛЬНА КОЛОНКА (Назва та Рік) */
 .award__info-col {
     display: flex;
-    flex-direction: column; /* Рік під назвою */
-    gap: 10px;
+    flex-direction: column;
+    gap: 12px; /* Відстань між назвою та роком */
 }
 
 .award__name {
+    font-family: 'Prata', serif;
     font-size: 20px;
     line-height: 1.3;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .award__year {
-    font-size: 32px;
-    color: #FFFFFF;
     font-family: 'Prata', serif;
+    font-size: 36px; /* Великий акцентний рік */
+    color: #ffffff;
+    line-height: 1;
 }
 
-/* ОПИС (Права колонка) */
+/* ПРАВА КОЛОНКА (Опис) */
 .award__description {
     font-family: Arial, sans-serif;
-    font-size: 14px; /* Менший розмір як на макеті */
+    font-size: 14px; /* Дрібніший шрифт для тексту */
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.4); /* Дуже приглушений колір */
-    max-width: 550px;
+    color: rgba(255, 255, 255, 0.45); /* Приглушений колір як на фото №2 */
+    max-width: 540px;
+    margin-top: 5px; /* Невеликий відступ зверху для балансу з назвою */
 }
 
-/* АДАПТИВНІСТЬ */
-@media (max-width: 992px) {
+/* 4. АДАПТИВНІСТЬ (Для мобільних пристроїв) */
+@media (max-width: 1024px) {
     .award {
-        grid-template-columns: 160px 1fr;
-        gap: 30px;
+        grid-template-columns: 180px 1fr;
+        gap: 40px;
     }
     .award__text-col {
-        grid-column: 1 / -1;
-        margin-top: 10px;
+        grid-column: 2;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .award {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
     }
-    .award__logo-box { margin: 0 auto 20px; }
-    .award__description { margin: 0 auto; }
+    
+    .award__logo-box {
+        margin: 0 auto;
+    }
+    
+    .award__description {
+        margin: 0 auto;
+    }
+    
+    .awards__title {
+        font-size: 38px;
+    }
 }
