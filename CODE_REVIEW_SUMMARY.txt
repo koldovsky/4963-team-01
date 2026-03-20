@@ -1,0 +1,124 @@
+=============================================================================
+CODE REVIEW SUMMARY - Based on AGENTS.md Standards
+Date: 2026-03-20
+=============================================================================
+
+REVIEW METHODOLOGY:
+This automated code review checked all HTML, CSS, and JavaScript files 
+against the standards defined in AGENTS.md.
+
+=============================================================================
+VIOLATIONS FOUND AND ISSUES CREATED:
+=============================================================================
+
+1. ISSUE #70: Invalid directory structure - js-tasks folder
+   ─────────────────────────────────────────────────────────
+   Severity: HIGH
+   Assigned to: but-d
+   Violation: Non-compliant directory structure
+   Details: The directory js-tasks/ violates AGENTS.md structure rules.
+            All JavaScript files should be in js/ directory.
+   Files Affected: js-tasks/tasks01.js
+   Solution: Move all files from js-tasks/ to js/ and delete the directory
+
+2. ISSUE #71: Invalid CSS nesting syntax
+   ─────────────────────────────────────
+   Severity: HIGH
+   Assigned to: BrytanVitalii
+   Violation: Non-standard CSS nesting syntax
+   Details: Multiple CSS files use &: nested selectors (e.g., &:hover)
+            which require a CSS preprocessor. Project uses vanilla CSS.
+   Files Affected:
+   - css/components.css (lines 37-40, 47-50)
+   - css/global.footer.partial.css (multiple nested rules)
+   - css/index.newsletter.partial.css (lines 4-78)
+   Solution: Refactor to standard CSS syntax without nesting
+
+3. ISSUE #72: Missing CSS file for wine-categories partial
+   ────────────────────────────────────────────────────────
+   Severity: MEDIUM
+   Assigned to: OlesiaKonior (by email)
+   Violation: Incomplete partial implementation
+   Details: HTML file exists but corresponding CSS file is missing.
+            Each partial should have both HTML and CSS files.
+   Files Affected: 
+   - Exists: index.wine-categories.partial.html
+   - Missing: css/index.wine-categories.partial.css
+   Solution: Create the missing CSS file with proper styling
+
+4. ISSUE #73: Inconsistent formatting - double space in class attribute
+   ───────────────────────────────────────────────────────────────────
+   Severity: LOW
+   Assigned to: but-d
+   Violation: Code formatting inconsistency
+   Details: Double space between class names in age modal button element
+   File: index.age-modal.partial.html, line 21
+   Current: class="age-modal__button  button--primary"
+   Expected: class="age-modal__button button--primary"
+   Solution: Remove extra space (Prettier fixable)
+
+5. ISSUE #74: BEM naming convention violation - excessively nested classes
+   ────────────────────────────────────────────────────────────────────
+   Severity: MEDIUM
+   Assigned to: BrytanVitalii
+   Violation: Non-compliant BEM naming
+   Details: Class names have 3+ underscores creating deeply nested
+            structures (e.g., best-deals__carousel-items__item__image)
+            BEM should be limited to block__element--modifier
+   File: index.best-deals.partial.html (18 instances found)
+   Solution: Refactor to proper 2-level BEM structure
+
+=============================================================================
+STANDARDS REFERENCED:
+=============================================================================
+
+1. Project Structure (AGENTS.md)
+   - JavaScript files must go in js/ directory
+   - CSS files must go in css/ directory
+   - Images must go in img/ directory
+   - Partials follow [page].[component].partial.html format
+
+2. CSS Architecture (AGENTS.md)
+   - Must follow BEM methodology
+   - Pattern: .block, .block__element, .block__element--modifier
+   - Must use vanilla CSS, not preprocessor syntax
+   - Must use 2-space indentation
+   - Mobile-first design approach
+
+3. Code Formatting (AGENTS.md)
+   - Follow Prettier formatting standards
+   - 2-space indentation (not 4)
+   - Lowercase HTML attributes
+   - Consistent nesting
+
+4. File Naming (AGENTS.md)
+   - All files must use kebab-case
+   - No camelCase, PascalCase, or snake_case
+
+=============================================================================
+IMPACT ANALYSIS:
+=============================================================================
+
+High Priority (Breaking):
+  - Invalid directory structure: Confuses developers, breaks conventions
+  - CSS nesting syntax: May fail in production without preprocessor
+
+Medium Priority (Should Fix):
+  - Missing CSS file: Leads to unstyled components
+  - BEM violations: Makes CSS maintenance difficult
+
+Low Priority (Style):
+  - Formatting inconsistencies: Code cleanliness issues
+
+=============================================================================
+RECOMMENDATIONS:
+=============================================================================
+
+1. Fix high-priority issues immediately
+2. Enforce AGENTS.md compliance in pull request reviews
+3. Consider using Prettier with a configuration file
+4. Add pre-commit hooks to validate file structure
+5. Create a linting configuration for CSS to catch nesting syntax
+6. Team training on BEM naming conventions
+
+=============================================================================
