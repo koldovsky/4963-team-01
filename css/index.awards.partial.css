@@ -74,7 +74,9 @@
 }
 
 .award-col-1 img {
-  max-width: 140px;
+  width: 147.91px; 
+  height: 73.95px;
+  object-fit: contain;
 }
 
 .award-col-2 {
