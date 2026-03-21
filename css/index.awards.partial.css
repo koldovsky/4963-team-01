@@ -110,9 +110,14 @@
 
 .award-col-3 p {
   margin: 0;
-  font-size: 15px;
+  /* Ваші параметри: 18px та білий колір */
+  font-size: 18px;
+  color: #FFFFFF;
+  
+  /* Використовуємо Rubik з вашого global.css */
+  font-family: var(--font-family); 
+  
   line-height: 1.7;
-  color: var(--text-color-secondary);
   font-weight: 300;
 }
 
