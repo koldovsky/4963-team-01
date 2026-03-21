@@ -76,15 +76,15 @@
 }
 
 .award-col-2 {
-  flex: 0 0 auto;
+  flex: 0 0 400px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  min-width: 320px;
 }
 
 .award-name {
+  flex: 1;
   font-family: var(--font-family) !important;
   color: #FFFFFF !important;
   font-size: 18px !important;
@@ -92,15 +92,15 @@
   line-height: 1.4;
   margin: 0;
   font-weight: 500;
-  flex: none;
 }
 
 .award-year {
+  flex: 0 0 80px;
+  text-align: left;
   font-family: var(--font-family-secondary);
   font-size: 32px;
   color: var(--text-color);
   font-weight: 700;
-  margin-left: 0;
 }
 
 .award-col-3 {
