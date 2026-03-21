@@ -107,13 +107,10 @@
 }
 
 .award-col-3 p {
-  margin: 0;
-  font-size: 18px;
-  color: #FFFFFF;
-  
-
-  font-family: var(--font-family); 
-  
+  margin: 0 !important;
+  font-family: var(--font-family) !important;
+  font-size: 18px !important;
+  color: #FFFFFF !important;
   line-height: 1.7;
   font-weight: 300;
 }
