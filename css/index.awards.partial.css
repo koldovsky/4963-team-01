@@ -76,7 +76,7 @@
 }
 
 .award-col-2 {
-  flex: 0 0 400px;
+  flex: 0 0 450px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -92,11 +92,11 @@
   line-height: 1.4;
   margin: 0;
   font-weight: 500;
+  text-align: left;
 }
 
 .award-year {
-  flex: 0 0 80px;
-  text-align: left;
+  flex: 0 0 auto;
   font-family: var(--font-family-secondary);
   font-size: 32px;
   color: var(--text-color);
