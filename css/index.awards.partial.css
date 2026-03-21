@@ -1,5 +1,5 @@
 .awards {
-  background-color: #130A09 !important; 
+  background-color: #130A09 !important;
   padding: 100px 0;
   color: #a5a5a5;
   font-family: 'Rubik', sans-serif;
@@ -16,8 +16,8 @@
   display: block;
   text-align: center;
   font-family: 'Great Vibes', cursive;
-  color: #C8693A;                      
-  font-size: 28px;                     
+  color: #C8693A;
+  font-size: 28px;
   margin-bottom: 10px;
   font-weight: 400;
 }
@@ -29,17 +29,17 @@
   line-height: 1.35;
   font-weight: 400;
   text-align: center;
-  margin: 10px auto 0; /* Прибираємо нижній margin, бо його дасть картинка */
+  margin: 10px auto 0;
   display: block;
   width: 100%;
 }
 
 .awards-divider {
   display: block;
-  margin: 30px auto;    
-  width: 100%;            
-  max-width: 250px;       
-  height: auto;          
+  margin: 30px auto;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
 }
 
 .awards-intro {
@@ -54,7 +54,6 @@
   text-align: center;
 }
 
-/* СПИСОК ТА ВИРІВНЮВАННЯ */
 .award-item {
   display: flex;
   align-items: center;
@@ -67,7 +66,6 @@
   border-bottom: none;
 }
 
-/* Перша колонка: Логотип */
 .award-col-1 {
   flex: 0 0 160px;
   display: flex;
@@ -78,9 +76,8 @@
   max-width: 140px;
 }
 
-/* Друга колонка: Назва (Курсив) + Рік */
 .award-col-2 {
-  flex: 0 0 380px; /* Фіксуємо ширину для рівності опису */
+  flex: 0 0 380px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -91,7 +88,7 @@
   font-family: 'Playfair Display', serif;
   color: #c58d5d;
   font-size: 20px;
-  font-style: italic; /* Курсив для назви */
+  font-style: italic;
   margin: 0;
   line-height: 1.2;
   flex: 1;
@@ -104,7 +101,6 @@
   font-weight: 700;
 }
 
-/* Третя колонка: Опис */
 .award-col-3 {
   flex: 1;
 }
@@ -117,7 +113,6 @@
   font-weight: 300;
 }
 
-/* АДАПТИВНІСТЬ */
 @media (max-width: 991px) {
   .award-item {
     flex-direction: column;
