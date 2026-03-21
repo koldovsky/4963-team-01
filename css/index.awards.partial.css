@@ -18,7 +18,8 @@
   font-family: var(--font-family-title);
   color: var(--accent-color);
   font-size: 28px;
-  margin-bottom: 10px;
+  /* Додаємо відступ знизу, щоб відштовхнути головний заголовок */
+  margin-bottom: 30px; 
   font-weight: 400;
 }
 
@@ -29,7 +30,8 @@
   line-height: 1.35;
   font-weight: 400;
   text-align: center;
-  margin: 10px auto 0;
+  /* Прибираємо зайві марджини зверху, щоб керувати відступом тільки з одного боку */
+  margin: 0 auto; 
   display: block;
   width: 100%;
 }
