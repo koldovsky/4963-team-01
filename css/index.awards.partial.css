@@ -114,6 +114,8 @@
 
 .award-col-3 {
   flex: 1;
+  /* Обмежуємо ширину, щоб текст переносився на 4 рядки */
+  max-width: 450px !important; 
 }
 
 .award-col-3 p {
@@ -121,9 +123,10 @@
   font-family: 'Rubik', sans-serif !important;
   font-size: 16px !important;
   color: #898082 !important;
-  line-height: 1.6 !important;
+  line-height: 1.5 !important; /* Трохи зменшив інтервал для кращого вигляду */
   font-weight: 400 !important;
   opacity: 1 !important;
+  text-align: left !important;
 }
 
 hr {
@@ -146,5 +149,12 @@ hr {
     min-width: auto !important;
   }
 
+  .award-col-3 {
+    max-width: 100% !important;
+  }
+
   .award-name {
     flex: none !important;
+    width: auto !important;
+  }
+}
