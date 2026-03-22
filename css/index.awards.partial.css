@@ -86,7 +86,7 @@
 
 .award-name {
   flex: 0 0 185px !important;
-  font-family: var(--font-family) !important;
+  font-family: 'Rubik', sans-serif !important;
   color: #FFFFFF !important;
   font-size: 18px !important;
   font-style: normal !important;
@@ -98,7 +98,7 @@
 
 .award-year {
   flex: 0 0 auto !important;
-  font-family: var(--font-family-secondary) !important;
+  font-family: 'Prata', serif !important;
   font-size: 22px !important;
   color: var(--text-color) !important;
   font-weight: 400 !important;
