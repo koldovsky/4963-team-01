@@ -64,15 +64,16 @@
 }
 
 .award-col-1 {
-  flex: 0 0 160px;
-  display: flex;
-  justify-content: flex-start;
+  flex: 0 0 160px !important;
+  display: flex !important;
+  justify-content: flex-start !important;
 }
 
 .award-col-1 img {
   width: 147.91px !important;
   height: 73.95px !important;
-  object-fit: contain;
+  object-fit: contain !important;
+  display: block !important;
 }
 
 .award-col-2 {
@@ -98,8 +99,8 @@
 
 .award-year {
   flex: 0 0 auto !important;
-  font-family: 'Prata', serif !important;
-  font-size: 22px !important;
+  font-family: 'Rubik', sans-serif !important;
+  font-size: 18px !important;
   color: var(--text-color) !important;
   font-weight: 400 !important;
   margin: 0 !important;
