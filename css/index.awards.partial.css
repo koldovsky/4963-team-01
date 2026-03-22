@@ -99,9 +99,9 @@
 .award-year {
   flex: 0 0 auto !important;
   font-family: var(--font-family-secondary) !important;
-  font-size: 32px !important;
+  font-size: 22px !important;
   color: var(--text-color) !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   margin: 0 !important;
 }
 
