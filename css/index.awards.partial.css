@@ -157,22 +157,52 @@
 
 /* --- МОБІЛЬНА ВЕРСІЯ --- */
 @media (max-width: 991px) {
+  .awards {
+    padding: 40px 15px !important;
+  }
+
+  .awards-header {
+    margin-bottom: 30px !important;
+  }
+
+  .awards-main-title {
+    font-size: 28px !important;
+  }
+
   .award-item {
     flex-direction: column !important;
-    text-align: center !important;
-    gap: 30px !important;
-    padding: 40px 0 !important;
+    align-items: flex-start !important;
+    padding: 20px 0 !important;
+    gap: 12px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .award-col-1 {
+    width: 70px !important;
+    height: auto !important;
+    justify-content: flex-start !important;
+  }
+
+  .award-col-1 img {
+    width: 70px !important;
+    height: auto !important;
   }
 
   .award-col-2 {
     width: 100% !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
     min-width: auto !important;
   }
 
   .award-name {
     flex: none !important;
     width: auto !important;
+    font-size: 16px !important;
+  }
+
+  .award-year {
+    font-size: 18px !important;
   }
 
   .award-col-3, 
@@ -183,9 +213,12 @@
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
+    display: block !important;
   }
 
   .award-col-3 p {
-    text-align: center !important;
+    text-align: left !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
   }
 }
