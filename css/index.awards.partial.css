@@ -76,15 +76,20 @@
 }
 
 .award-col-2 {
-  flex: 0 0 450px;
+  flex: 0 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  
+  gap: 30px; 
+
+  min-width: 380px; 
 }
 
 .award-name {
-  flex: 1;
+  
+  flex: none; 
+  width: 250px; /
   font-family: var(--font-family) !important;
   color: #FFFFFF !important;
   font-size: 18px !important;
@@ -92,17 +97,15 @@
   line-height: 1.4;
   margin: 0;
   font-weight: 500;
-  text-align: left;
 }
 
 .award-year {
-  /* ЗМІНА ТУТ: фіксуємо ширину контейнера цифри */
-  flex: 0 0 80px; 
-  text-align: left; 
+  flex: none;
   font-family: var(--font-family-secondary);
   font-size: 32px;
   color: var(--text-color);
   font-weight: 700;
+  margin: 0;
 }
 
 .award-col-3 {
