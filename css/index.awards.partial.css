@@ -74,10 +74,6 @@
 .award-col-1 img {
   width: 147.91px !important;
   height: 73.95px !important;
-  min-width: 147.91px !important;
-  max-width: 147.91px !important;
-  min-height: 73.95px !important;
-  max-height: 73.95px !important;
   object-fit: contain !important;
   display: block !important;
 }
@@ -127,15 +123,12 @@
   text-align: left !important;
 }
 
-
-
-
+/* Налаштування ширини для кожного блоку */
 .award-item:nth-child(1) .award-col-3 {
   width: 501.76px !important;
   max-width: 501.76px !important;
   height: 95.51px !important;
 }
-
 
 .award-item:nth-child(2) .award-col-3 {
   width: 502.4px !important;
@@ -143,14 +136,13 @@
   height: 95.51px !important;
 }
 
-
 .award-item:nth-child(3) .award-col-3 {
   width: 493.52px !important;
   max-width: 493.52px !important;
   height: 121.09px !important;
 }
 
-
+/* 4-й блок: налаштування для 4 рядків */
 .award-item:nth-child(4) .award-col-3 {
   width: auto !important; 
   flex-grow: 1 !important; 
@@ -160,5 +152,40 @@
 
 .award-item:nth-child(4) .award-col-3 p {
   line-height: 1.4 !important; 
+  letter-spacing: -0.1px !important;
 }
 
+/* --- МОБІЛЬНА ВЕРСІЯ --- */
+@media (max-width: 991px) {
+  .award-item {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 30px !important;
+    padding: 40px 0 !important;
+  }
+
+  .award-col-2 {
+    width: 100% !important;
+    justify-content: center !important;
+    min-width: auto !important;
+  }
+
+  .award-name {
+    flex: none !important;
+    width: auto !important;
+  }
+
+  .award-col-3, 
+  .award-item:nth-child(1) .award-col-3,
+  .award-item:nth-child(2) .award-col-3,
+  .award-item:nth-child(3) .award-col-3,
+  .award-item:nth-child(4) .award-col-3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .award-col-3 p {
+    text-align: center !important;
+  }
+}
