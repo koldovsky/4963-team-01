@@ -64,18 +64,24 @@
 }
 
 .award-col-1 {
-  flex: 0 0 160px !important;
+  flex: 0 0 147.91px !important;
+  width: 147.91px !important;
+  max-width: 147.91px !important;
+  height: 73.95px !important;
   display: flex !important;
-  justify-content: flex-start !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow: hidden !important;
 }
 
 .award-col-1 img {
   width: 147.91px !important;
   height: 73.95px !important;
-  object-fit: contain !important;
+  min-width: 147.91px !important;
+  min-height: 73.95px !important;
+  object-fit: contain !important; /* Зберігає пропорції логотипу всередині цих розмірів */
   display: block !important;
 }
-
 .award-col-2 {
   display: flex !important;
   align-items: center !important;
