@@ -53,13 +53,15 @@
   text-align: center;
 }
 
+
 .award-item {
   display: flex !important;
   align-items: center !important;
-  padding: 20px 0 !important;
+  padding: 20px 0 !important; 
   border: none !important;
   gap: 40px !important;
 }
+
 
 .award-col-1 {
   flex: 0 0 147.91px !important;
@@ -82,6 +84,7 @@
   display: block !important;
 }
 
+
 .award-col-2 {
   display: flex !important;
   align-items: center !important;
@@ -92,14 +95,13 @@
 }
 
 .award-name {
-  flex: 0 0 185px !important;
+  flex: 0 0 185px !important; 
   font-family: 'Rubik', sans-serif !important;
   color: #FFFFFF !important;
   font-size: 18px !important;
-  font-style: normal !important;
+  font-weight: 500 !important;
   line-height: 1.2 !important;
   margin: 0 !important;
-  font-weight: 500 !important;
   text-align: left !important;
 }
 
@@ -112,10 +114,11 @@
   margin: 0 !important;
 }
 
+
 .award-col-3 {
   flex: 1;
-  /* Обмежуємо ширину, щоб текст переносився на 4 рядки */
-  max-width: 450px !important; 
+  display: flex !important;
+  align-items: center !important;
 }
 
 .award-col-3 p {
@@ -123,22 +126,49 @@
   font-family: 'Rubik', sans-serif !important;
   font-size: 16px !important;
   color: #898082 !important;
-  line-height: 1.5 !important; /* Трохи зменшив інтервал для кращого вигляду */
+  line-height: 1.5 !important;
   font-weight: 400 !important;
-  opacity: 1 !important;
   text-align: left !important;
 }
 
+
+.award-item:nth-child(1) .award-col-3 {
+  width: 501.76px !important;
+  max-width: 501.76px !important;
+  height: 95.51px !important;
+}
+
+
+.award-item:nth-child(2) .award-col-3 {
+  width: 502.4px !important;
+  max-width: 502.4px !important;
+  height: 95.51px !important;
+}
+
+
+.award-item:nth-child(3) .award-col-3 {
+  width: 493.52px !important;
+  max-width: 493.52px !important;
+  height: 121.09px !important;
+}
+
+
+.award-item:nth-child(4) .award-col-3 {
+  width: 500.61px !important;
+  max-width: 500.61px !important;
+  height: 95.51px !important;
+}
 hr {
   display: none !important;
 }
+
 
 @media (max-width: 991px) {
   .award-item {
     flex-direction: column !important;
     text-align: center !important;
-    gap: 15px !important;
-    padding: 25px 0 !important;
+    gap: 20px !important;
+    padding: 30px 0 !important;
   }
 
   .award-col-2 {
@@ -149,12 +179,14 @@ hr {
     min-width: auto !important;
   }
 
-  .award-col-3 {
-    max-width: 100% !important;
-  }
-
   .award-name {
     flex: none !important;
     width: auto !important;
+  }
+
+  .award-col-3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
