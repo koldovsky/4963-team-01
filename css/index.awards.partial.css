@@ -43,8 +43,8 @@
 }
 
 .awards-intro {
-  font-family: var(--font-family);
-  font-size: 18px;
+  font-family: 'Rubik', sans-serif !important; /* Встановлено Rubik */
+  font-size: 18px !important;                 /* Встановлено 18px */
   color: #FFFFFF !important;
   font-weight: 400;
   line-height: 1.6;
@@ -119,8 +119,8 @@
 .award-col-3 p {
   margin: 0 !important;
   font-family: 'Rubik', sans-serif !important;
-  font-size: 16px !important;                 
-  color: #898082 !important;                
+  font-size: 16px !important;
+  color: #898082 !important;
   line-height: 1.6 !important;
   font-weight: 400 !important;
   opacity: 1 !important;
