@@ -56,7 +56,7 @@
 .award-item {
   display: flex !important;
   align-items: center !important;
-  padding: 10px 0 !important;
+  padding: 20px 0 !important; /* Оптимальна відстань: не занадто тісно, не занадто вільно */
   border: none !important;
   gap: 40px !important;
 }
@@ -135,7 +135,7 @@ hr {
     flex-direction: column !important;
     text-align: center !important;
     gap: 15px !important;
-    padding: 20px 0 !important;
+    padding: 25px 0 !important;
   }
 
   .award-col-2 {
@@ -148,6 +148,3 @@ hr {
 
   .award-name {
     flex: none !important;
-    width: auto !important;
-  }
-}
