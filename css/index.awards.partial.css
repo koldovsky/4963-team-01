@@ -76,36 +76,33 @@
 }
 
 .award-col-2 {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  
-  gap: 30px; 
-
-  min-width: 380px; 
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex: 0 0 auto !important;
+  gap: 20px !important;
+  min-width: 350px !important;
 }
 
 .award-name {
-  
-  flex: none; 
-  width: 250px; /
+  flex: 0 0 250px !important;
   font-family: var(--font-family) !important;
   color: #FFFFFF !important;
   font-size: 18px !important;
   font-style: normal !important;
-  line-height: 1.4;
-  margin: 0;
-  font-weight: 500;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+  text-align: left !important;
 }
 
 .award-year {
-  flex: none;
-  font-family: var(--font-family-secondary);
-  font-size: 32px;
-  color: var(--text-color);
-  font-weight: 700;
-  margin: 0;
+  flex: 0 0 auto !important;
+  font-family: var(--font-family-secondary) !important;
+  font-size: 32px !important;
+  color: var(--text-color) !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
 }
 
 .award-col-3 {
