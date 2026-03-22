@@ -58,7 +58,7 @@
   align-items: center !important;
   padding: 20px 0 !important;
   border: none !important;
-  gap: 100px !important; /* Збільшений горизонтальний відступ */
+  gap: 100px !important; 
 }
 
 .award-col-1 {
@@ -127,64 +127,38 @@
   text-align: left !important;
 }
 
-/* Індивідуальні розміри для блоків опису */
 
-/* 1-й блок: 501.76 x 95.51 */
+
+
 .award-item:nth-child(1) .award-col-3 {
   width: 501.76px !important;
   max-width: 501.76px !important;
   height: 95.51px !important;
 }
 
-/* 2-й блок: 502.4 x 95.51 */
+
 .award-item:nth-child(2) .award-col-3 {
   width: 502.4px !important;
   max-width: 502.4px !important;
   height: 95.51px !important;
 }
 
-/* 3-й блок: 493.52 x 121.09 */
+
 .award-item:nth-child(3) .award-col-3 {
   width: 493.52px !important;
   max-width: 493.52px !important;
   height: 121.09px !important;
 }
 
-/* 4-й блок: Скориговано ширину до 510px, щоб текст вліз у 4 рядки */
+
 .award-item:nth-child(4) .award-col-3 {
-  width: 510px !important;
-  max-width: 510px !important;
+  width: auto !important; 
+  flex-grow: 1 !important; 
+  max-width: 100% !important; 
   height: 95.51px !important;
 }
 
-hr {
-  display: none !important;
+.award-item:nth-child(4) .award-col-3 p {
+  line-height: 1.4 !important; 
 }
 
-@media (max-width: 991px) {
-  .award-item {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 20px !important;
-    padding: 30px 0 !important;
-  }
-
-  .award-col-2 {
-    flex: none !important;
-    width: 100% !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    min-width: auto !important;
-  }
-
-  .award-name {
-    flex: none !important;
-    width: auto !important;
-  }
-
-  .award-col-3 {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
