@@ -96,7 +96,9 @@
 }
 
 .award-year {
-  flex: 0 0 auto;
+  /* ЗМІНА ТУТ: фіксуємо ширину контейнера цифри */
+  flex: 0 0 80px; 
+  text-align: left; 
   font-family: var(--font-family-secondary);
   font-size: 32px;
   color: var(--text-color);
