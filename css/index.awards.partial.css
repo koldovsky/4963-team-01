@@ -80,12 +80,12 @@
   align-items: center !important;
   justify-content: flex-start !important;
   flex: 0 0 auto !important;
-  gap: 20px !important;
-  min-width: 350px !important;
+  gap: 12px !important;
+  min-width: 320px !important;
 }
 
 .award-name {
-  flex: 0 0 250px !important;
+  flex: 0 0 220px !important;
   font-family: var(--font-family) !important;
   color: #FFFFFF !important;
   font-size: 18px !important;
