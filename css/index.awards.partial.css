@@ -54,13 +54,11 @@
 }
 
 .award-item {
-  display: flex;
-  align-items: center;
-  padding: 40px 0;
+  display: flex !important;
+  align-items: center !important;
+  padding: 40px 0 !important;
   border: none !important;
-  border-bottom: 0 !important;
-  border-top: 0 !important;
-  gap: 40px;
+  gap: 40px !important;
 }
 
 .award-col-1 {
@@ -71,17 +69,19 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  overflow: hidden !important;
 }
 
 .award-col-1 img {
   width: 147.91px !important;
   height: 73.95px !important;
   min-width: 147.91px !important;
+  max-width: 147.91px !important;
   min-height: 73.95px !important;
-  object-fit: contain !important; /* Зберігає пропорції логотипу всередині цих розмірів */
+  max-height: 73.95px !important;
+  object-fit: contain !important;
   display: block !important;
 }
+
 .award-col-2 {
   display: flex !important;
   align-items: center !important;
@@ -132,19 +132,25 @@ hr {
 
 @media (max-width: 991px) {
   .award-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 20px !important;
   }
 
   .award-col-2 {
-    flex: none;
-    width: 100%;
-    justify-content: center;
-    gap: 15px;
+    flex: none !important;
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    min-width: auto !important;
+  }
+
+  .award-name {
+    flex: none !important;
+    width: auto !important;
   }
 
   .award-year {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
