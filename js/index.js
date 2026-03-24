@@ -1,5 +1,5 @@
 function init() {
-  import("./age-modal.js");
+  import("./index.age-modal.js");
 }
 
 const totalPartials = document.querySelectorAll(
