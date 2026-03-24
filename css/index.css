@@ -2,19 +2,15 @@
 @import "components.css";
 @import "age-modal.partial.css";
 @import "global.header-nav.partial.css";
-@import "index.varieties.partial.css";
-@import "index.about.partial.css";
-@import "index.craft-wines.partial.css";
 @import "index.hero.partial.css";
-@import "index.history.partial.css";
+@import "index.about.partial.css";  
 @import "index.best-deals.partial.css";
-
+@import "index.history-timeline.partial.css";
+@import "index.varieties.partial.css";
+@import "index.craft-wines.partial.css";
+@import "index.history.partial.css";
+@import "index.wine-categories.partial.css";
+@import "index.awards.partial.css";
 @import "index.faq.partial.css";
 @import "index.newsletter.partial.css";
 @import "global.footer.partial.css";
-
-@import "index.history-timeline.partial.css";
-
-@import "index.awards.partial.css";
-
-@import "index.wine-categories.partial.css";
