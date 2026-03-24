@@ -1,114 +1,113 @@
 .special-wines {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: 4rem 0;
 }
 
 .special-wines__top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    max-width: 760px;
-    margin: 0 auto;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .special-wines__title {
-    padding: 0 15px;
-    font-size: clamp(14px, 0.75rem + 1.1vw, 24px);
-    font-family: var(--font-family-title);
-    color: var(--accent-color);
+  padding: 0 15px;
+  font-size: clamp(14px, 0.75rem + 1.1vw, 24px);
+  font-family: var(--font-family-title);
+  color: var(--accent-color);
 }
 
 .special-wines__subtitle {
-    margin: 0;
-    padding: 0 15px;
-    font-family: var(--font-family-secondary);
-    font-weight: var(--font-weight);
-    font-size: clamp(32px, 1.7rem + 1.5vw, 44px);
-    line-height: 1.2;
+  margin: 0;
+  padding: 0 15px;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight);
+  font-size: clamp(32px, 1.7rem + 1.5vw, 44px);
+  line-height: 1.2;
 }
 
 .special-wines__illustration {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .special-wines__intro {
-    max-width: 680px;
-    padding: 0 15px;
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: var(--font-family);
-    color: var(--text-color);
+  max-width: 680px;
+  padding: 0 15px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  color: var(--text-color);
 }
 
 .special-wines__wine-picture {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
 }
 
 .special-wines__features {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 15px;
 }
 
 .special-wines__feature-title {
-    margin: 0 0 0.625rem;
-    font-size: 22px;
-    font-family: var(--font-family-secondary);
+  margin: 0 0 0.625rem;
+  font-size: 22px;
+  font-family: var(--font-family-secondary);
 }
 
 .special-wines__feature-line {
-    fill: none;
-    stroke: var(--accent-color);
-    stroke-width: 2px;
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 2px;
 }
 
 .special-wines__feature-description {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-color-secondary);
-    font-family: var(--font-family);
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color-secondary);
+  font-family: var(--font-family);
 }
 
 @media (min-width: 768px) {
-    .special-wines {
-        grid-template-columns: minmax(220px, 340px) 1fr;
-        column-gap: 60px;
-        row-gap: 3rem;
-        align-items: start;
-        padding: 5rem 0;
-    }
+  .special-wines {
+    grid-template-columns: minmax(220px, 340px) 1fr;
+    column-gap: 60px;
+    row-gap: 3rem;
+    align-items: start;
+    padding: 5rem 0;
+  }
 
-    .special-wines__top {
-        grid-column: 1 / -1;
-    }
+  .special-wines__top {
+    grid-column: 1 / -1;
+  }
 
-    .special-wines__wine-picture {
-        grid-column: 1;
-        justify-self: start;
-        align-self: end;
-        margin: 0;
-    }
+  .special-wines__wine-picture {
+    grid-column: 1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+  }
 
-    .special-wines__features {
-        grid-column: 2;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 2.5rem;
-        align-self: start;
-    }
+  .special-wines__features {
+    grid-column: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+    align-self: start;
+  }
 }
 
 @media (min-width: 992px) {
-    .special-wines__subtitle {
-        font-size: 48px;
-    }
+  .special-wines__subtitle {
+    font-size: 48px;
+  }
 }
-
