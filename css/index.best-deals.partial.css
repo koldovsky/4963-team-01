@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1.5rem 24px;
+  padding: 0 24px;
 
   .best-deals__title {
     font-family: var(--font-family-title);
@@ -136,7 +136,7 @@
 /* Desktop */
 @media (min-width: 765px) {
   .best-deals {
-    padding: 1.5rem 32px;
+    padding: 0 32px;
 
     .best-deals__title {
       font-size: 21px;
@@ -173,7 +173,7 @@
 
 @media (min-width: 990px) {
   .best-deals {
-    padding: 1.5rem 40px;
+    padding: 0 40px;
 
     .best-deals__title {
       font-size: 28px;
@@ -195,7 +195,7 @@
 
 @media (min-width: 1280px) {
   .best-deals {
-    padding: 1.5rem 15px;
+    padding: 0 15px;
 
     .best-deals__carousel {
       .best-deals__carousel__button-next,
