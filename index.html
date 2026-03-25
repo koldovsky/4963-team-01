@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" type="module"></script>
   </head>
   <body>
     <!-- IF THERE ARE ANY MISTAKES IN THE COMMENTS, I APOLOGIZE -->
@@ -43,6 +44,17 @@
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.about.partial.html"
+      ></section>
+      <!-- Novykov Dmytro -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.special-wines.partial.html"
+      ></section>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.discover-our-wines.partial.html"
       ></section>
       <!-- ============== -->
       <!-- Vitalii Brytan (3) -->
@@ -120,13 +132,18 @@
       data-hx-swap="outerHTML"
       data-hx-get="global.footer.partial.html"
     ></footer>
-    <!-- Modal window -->
+    <!-- Novykov Dmytro -->
     <div
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="index.age-modal.partial.html"
     ></div>
     <!-- End of modal window -->
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.loader.partial.html"
+    ></div>
     <script src="js/index.js"></script>
   </body>
 </html>
