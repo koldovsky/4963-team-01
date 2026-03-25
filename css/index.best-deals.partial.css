@@ -29,7 +29,7 @@
   }
 
   .best-deals__illustration,
-  .best-deals__carousel-items__item__button {
+  .best-deals__carousel-track__item__button {
     margin-top: 25px;
     width: 140px;
     font-size: 15px;
@@ -41,36 +41,38 @@
     max-width: 100%;
     margin-top: 50px;
 
-    .best-deals__carousel-items {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
+    .best-deals__carousel-window {
       overflow-x: hidden;
 
-      .best-deals__carousel-items__item {
+      .best-deals__carousel-track {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 15px;
+        flex-direction: row;
+        justify-content: flex-start;
 
-        width: 85vw;
-        max-width: 720px;
-        flex-shrink: 0;
+        .best-deals__carousel-track__item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 15px;
 
-        .best-deals__carousel-items__item__image {
-          width: 100%;
-        }
+          width: 85vw;
+          max-width: 720px;
+          flex-shrink: 0;
 
-        .best-deals__carousel-items__item__name {
-          font-size: 18px;
-          font-weight: var(--font-weight);
-          margin-top: 8px;
-        }
-        .best-deals__carousel-items__item__price {
-          font-size: 18px;
-          margin-top: 25px;
+          .best-deals__carousel-track__item__image {
+            width: 100%;
+          }
+
+          .best-deals__carousel-track__item__name {
+            font-size: 18px;
+            font-weight: var(--font-weight);
+            margin-top: 8px;
+          }
+          .best-deals__carousel-track__item__price {
+            font-size: 18px;
+            margin-top: 25px;
+          }
         }
       }
     }
@@ -129,6 +131,10 @@
       appearance: none;
       -webkit-appearance: none;
       cursor: pointer;
+
+      &.active {
+        background: var(--text-color);
+      }
     }
   }
 }
@@ -147,11 +153,13 @@
     }
 
     .best-deals__carousel {
-      .best-deals__carousel-items {
-        .best-deals__carousel-items__item {
-          width: 42.5vw;
-          .best-deals__carousel-items__item__name {
-            margin-top: 24px;
+      .best-deals__carousel-window {
+        .best-deals__carousel-track {
+          .best-deals__carousel-track__item {
+            width: 42.5vw;
+            .best-deals__carousel-track__item__name {
+              margin-top: 24px;
+            }
           }
         }
       }
@@ -183,10 +191,12 @@
     }
 
     .best-deals__carousel {
-      .best-deals__carousel-items {
-        .best-deals__carousel-items__item {
-          width: 28.5vw;
-          max-width: 390px;
+      .best-deals__carousel-window {
+        .best-deals__carousel-track {
+          .best-deals__carousel-track__item {
+            width: 28.5vw;
+            max-width: 390px;
+          }
         }
       }
     }
