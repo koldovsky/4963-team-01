@@ -31,6 +31,30 @@
   color: var(--text-color);
   scroll-behavior: smooth;
   font-family: var(--font-family);
+
+
+  --font-family: "Rubik", italic;
+  --font-family-title: "Great Vibes", normal;
+  --font-family-secondary: "Prata", normal;
+  --awards-padding-vertical: 100px;
+  --awards-padding-mobile: 40px;
+  --awards-padding-mobile-side: 15px;
+  --awards-margin-header: 80px;
+  --awards-margin-header-mobile: 30px;
+  --awards-label-font-size: 28px;
+  --awards-title-font-size: 48px;
+  --awards-title-font-size-mobile: 28px;
+  --awards-item-gap: 100px;
+  --awards-item-gap-mobile: 12px;
+  --awards-logo-width: 147.91px;
+  --awards-logo-height: 73.95px;
+  --awards-logo-width-mobile: 70px;
+  --awards-font-size-name-mobile: 16px;
+  --awards-font-size-year-mobile: 18px;
+  --awards-font-size-desc-mobile: 14px;
+  --awards-line-height-mobile: 1.4;
+  --color-border-soft: rgba(255, 255, 255, 0.1);
+
 }
 
 #loader {
