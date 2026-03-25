@@ -1,6 +1,6 @@
 .awards {
-  background-color: var(--background-color) !important;
-  padding: 100px 0;
+  background-color: var(--background-color);
+  padding: var(--awards-padding-vertical) 0;
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
@@ -8,8 +8,8 @@
 
 .awards-header {
   text-align: center;
-  margin-bottom: 80px;
-  background-color: transparent !important;
+  margin-bottom: var(--awards-margin-header);
+  background-color: transparent;
 }
 
 .awards-label {
@@ -17,14 +17,14 @@
   text-align: center;
   font-family: var(--font-family-title);
   color: var(--accent-color);
-  font-size: 28px;
+  font-size: var(--awards-label-font-size);
   margin-bottom: 30px;
   font-weight: 400;
 }
 
 .awards-main-title {
   font-family: var(--font-family-secondary);
-  font-size: 48px;
+  font-size: var(--awards-title-font-size);
   color: var(--text-color);
   line-height: 1.35;
   font-weight: 400;
@@ -43,9 +43,9 @@
 }
 
 .awards-intro {
-  font-family: 'Rubik', sans-serif !important;
-  font-size: 18px !important;
-  color: #FFFFFF !important;
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: #FFFFFF;
   font-weight: 400;
   line-height: 1.6;
   max-width: 650px;
@@ -54,171 +54,141 @@
 }
 
 .award-item {
-  display: flex !important;
-  align-items: center !important;
-  padding: 20px 0 !important;
-  border: none !important;
-  gap: 100px !important; 
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border: none;
+  gap: var(--awards-item-gap); 
 }
 
 .award-col-1 {
-  flex: 0 0 147.91px !important;
-  width: 147.91px !important;
-  max-width: 147.91px !important;
-  height: 73.95px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  flex: 0 0 var(--awards-logo-width);
+  width: var(--awards-logo-width);
+  max-width: var(--awards-logo-width);
+  height: var(--awards-logo-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .award-col-1 img {
-  width: 147.91px !important;
-  height: 73.95px !important;
-  object-fit: contain !important;
-  display: block !important;
+  width: var(--awards-logo-width);
+  height: var(--awards-logo-height);
+  object-fit: contain;
+  display: block;
 }
 
 .award-col-2 {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  flex: 0 0 auto !important;
-  gap: 8px !important;
-  min-width: 280px !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  gap: 8px;
+  min-width: 280px;
 }
 
 .award-name {
-  flex: 0 0 185px !important;
-  font-family: 'Rubik', sans-serif !important;
-  color: #FFFFFF !important;
-  font-size: 18px !important;
-  font-weight: 500 !important;
-  line-height: 1.2 !important;
-  margin: 0 !important;
-  text-align: left !important;
+  flex: 0 0 185px;
+  font-family: var(--font-family);
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
 }
 
 .award-year {
-  flex: 0 0 auto !important;
-  font-family: 'Prata', serif !important;
-  font-size: 22px !important;
-  color: var(--text-color) !important;
-  font-weight: 400 !important;
-  margin: 0 !important;
+  flex: 0 0 auto;
+  font-family: var(--font-family-secondary);
+  font-size: 22px;
+  color: var(--text-color);
+  font-weight: 400;
+  margin: 0;
 }
 
 .award-col-3 {
   flex: 1;
-  display: flex !important;
-  align-items: center !important;
+  display: flex;
+  align-items: center;
 }
 
 .award-col-3 p {
-  margin: 0 !important;
-  font-family: 'Rubik', sans-serif !important;
-  font-size: 16px !important;
-  color: #898082 !important;
-  line-height: 1.5 !important;
-  font-weight: 400 !important;
-  text-align: left !important;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--text-color-secondary);
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: left;
 }
 
-/* Налаштування ширини для кожного блоку */
-.award-item:nth-child(1) .award-col-3 {
-  width: 501.76px !important;
-  max-width: 501.76px !important;
-  height: 95.51px !important;
-}
+/* Specific item widths for desktop layout */
+.award-item:nth-child(1) .award-col-3 { width: 501.76px; max-width: 501.76px; }
+.award-item:nth-child(2) .award-col-3 { width: 502.4px; max-width: 502.4px; }
+.award-item:nth-child(3) .award-col-3 { width: 493.52px; max-width: 493.52px; }
+.award-item:nth-child(4) .award-col-3 { flex-grow: 1; }
 
-.award-item:nth-child(2) .award-col-3 {
-  width: 502.4px !important;
-  max-width: 502.4px !important;
-  height: 95.51px !important;
-}
-
-.award-item:nth-child(3) .award-col-3 {
-  width: 493.52px !important;
-  max-width: 493.52px !important;
-  height: 121.09px !important;
-}
-
-/* 4-й блок: налаштування для 4 рядків */
-.award-item:nth-child(4) .award-col-3 {
-  width: auto !important; 
-  flex-grow: 1 !important; 
-  max-width: 100% !important; 
-  height: 95.51px !important;
-}
-
-.award-item:nth-child(4) .award-col-3 p {
-  line-height: 1.4 !important; 
-  letter-spacing: -0.1px !important;
-}
-
-/* --- МОБІЛЬНА ВЕРСІЯ --- */
+/* Mobile Version - Breakpoint 991px */
 @media (max-width: 991px) {
   .awards {
-    padding: 40px 15px !important;
+    padding: var(--awards-padding-mobile) var(--awards-padding-mobile-side);
   }
 
   .awards-header {
-    margin-bottom: 30px !important;
+    margin-bottom: var(--awards-margin-header-mobile);
   }
 
   .awards-main-title {
-    font-size: 28px !important;
+    font-size: var(--awards-title-font-size-mobile);
   }
 
   .award-item {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding: 20px 0 !important;
-    gap: 12px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    gap: var(--awards-item-gap-mobile);
+    border-bottom: 1px solid var(--color-border-soft);
   }
 
   .award-col-1 {
-    width: 70px !important;
-    height: auto !important;
-    justify-content: flex-start !important;
+    width: var(--awards-logo-width-mobile);
+    height: auto;
+    flex: none;
   }
 
   .award-col-1 img {
-    width: 70px !important;
-    height: auto !important;
+    width: var(--awards-logo-width-mobile);
+    height: auto;
   }
 
   .award-col-2 {
-    width: 100% !important;
-    justify-content: space-between !important;
-    gap: 10px !important;
-    min-width: auto !important;
+    width: 100%;
+    justify-content: space-between;
+    min-width: auto;
   }
 
   .award-name {
-    flex: none !important;
-    width: auto !important;
-    font-size: 16px !important;
+    flex: none;
+    width: auto;
+    font-size: var(--awards-font-size-name-mobile);
   }
 
   .award-year {
-    font-size: 18px !important;
+    font-size: var(--awards-font-size-year-mobile);
   }
 
   .award-col-3, 
-  .award-item:nth-child(1) .award-col-3,
-  .award-item:nth-child(2) .award-col-3,
-  .award-item:nth-child(3) .award-col-3,
-  .award-item:nth-child(4) .award-col-3 {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
+  .award-item .award-col-3 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
   .award-col-3 p {
-    text-align: left !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
+    text-align: left;
+    font-size: var(--awards-font-size-desc-mobile);
+    line-height: var(--awards-line-height-mobile);
   }
 }
