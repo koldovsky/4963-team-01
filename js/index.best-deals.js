@@ -22,7 +22,7 @@ let currentSlidesShown = 0;
 let isAnimating = false;
 
 makeClones();
-setInitialPosition(items);
+setInitialPosition();
 updateActiveDot();
 
 function getSlidesToShow() {
@@ -75,11 +75,12 @@ function setInitialPosition() {
 }
 
 function updateActiveDot() {
-  if (cloneIndexMap == null) return;
+  if (!cloneIndexMap) return;
   const logicalIndex = cloneIndexMap[currentIndex];
- 
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[logicalIndex].classList.add('active');
+  if (dots[logicalIndex]) {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[logicalIndex].classList.add('active');
+  }
 }
 
 function updateCarousel() {
