@@ -69,6 +69,15 @@
 
                 .footer__contact-item {
                     margin: 0;
+
+                    a {
+                        color: var(--text-color-secondary);
+                        text-decoration: none;
+
+                        &:hover {
+                            color: var(--accent-color);
+                        }
+                    }
                 }
             }
 
