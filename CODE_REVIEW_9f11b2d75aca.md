@@ -108,7 +108,7 @@ Convert all SVG class names to kebab-case:
 - `logo_2gS` → `logo-2gs`
 - `border_2yy` → `border-2yy`
 
-**GitHub Issue**: Will be created to track this violation
+**GitHub Issue**: #236 - Created and assigned to Volodymyr Andriychak
 
 ---
 
