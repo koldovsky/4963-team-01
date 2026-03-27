@@ -1,6 +1,7 @@
 function init() {
   import("./index.best-deals.js");
   import("./index.age-modal.js");
+  import("./index.newsletter.js");
   import("./global.footer.js");
 }
 

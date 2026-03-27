@@ -7,17 +7,32 @@
         Learn more about wines and our special offers with our weekly digests.
       </p>
     </div>
-    <form class="newsletter__form">
-      <input type="email" class="newsletter__input" placeholder="Enter your email address here" required />
+    <form id="newsletter-form" class="newsletter__form" action="https://formspree.io/f/mykbzlak" method="POST">
+      <input type="email" name="email" class="newsletter__input" placeholder="Enter your email address here" required />
       <button type="submit" class="newsletter__button button--primary">Submit</button>
     </form>
-
-
   </div>
+
   <div class="newsletter__endline-container container">
     <svg xmlns="http://www.w3.org/2000/svg" class="newsletter__endline" width="3000px" height="31">
       <path d="M0 15.5 L3000 15.5" style="fill:none;stroke:rgba(255, 255, 255, 0.14);stroke-width:1px"></path>
     </svg>
   </div>
 
+  <!-- Newsletter Modal -->
+  <div class="newsletter-modal" id="newsletterModal" role="dialog" aria-modal="true">
+    <div class="newsletter-modal__backdrop"></div>
+    <div class="newsletter-modal__content">
+      <button class="newsletter-modal__close" id="newsletterCloseBtn" aria-label="Close modal">
+        ×
+      </button>
+      <svg class="newsletter-modal__icon" id="newsletterModalIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      </svg>
+      <h2 class="newsletter-modal__title" id="newsletterModalTitle">Thank you!</h2>
+      <p class="newsletter-modal__message" id="newsletterModalMessage">We will contact you shortly.</p>
+      <button class="newsletter-modal__button button--primary" id="newsletterOkBtn">
+        Ok
+      </button>
+    </div>
+  </div>
 </section>
