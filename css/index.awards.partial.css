@@ -5,6 +5,7 @@
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
+  /* Visual Stability and Focus Fixes */
   scroll-margin-top: 100px;
   overflow-x: clip;
   contain: layout;
@@ -69,6 +70,16 @@
   padding: 30px 0;
   border-bottom: 1px solid var(--color-border-soft);
   gap: 20px;
+  /* Initial animation state */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* State triggered by JavaScript when element enters viewport */
+.award-item--visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .award-col-1 {
@@ -131,7 +142,7 @@
 
   .award-item {
     display: grid;
-    /* Desktop layout grid: logo, name, year, description */
+    /* Grid layout for desktop: logo, name, year, description */
     grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
     flex-direction: row;
@@ -139,6 +150,7 @@
     gap: var(--awards-grid-gap);
     border-bottom: none;
     padding: 20px 0;
+    /* Animation properties inherited from mobile rule */
   }
 
   .award-col-1 {
