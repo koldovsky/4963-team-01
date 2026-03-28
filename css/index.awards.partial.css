@@ -1,4 +1,4 @@
-/* --- MOBILE STYLES (Default) --- */
+/* --- MOBILE STYLES --- */
 .awards {
   background-color: var(--background-color);
   padding: var(--awards-padding-mobile) var(--awards-padding-mobile-side);
@@ -17,30 +17,43 @@
 
 .awards-label {
   display: block;
+  text-align: center;
   font-family: var(--font-family-title);
   color: var(--accent-color);
   font-size: var(--awards-label-font-size);
   margin-bottom: 30px;
+  font-weight: 400;
 }
 
 .awards-main-title {
   font-family: var(--font-family-secondary);
   font-size: var(--awards-title-font-size-mobile);
+  color: var(--text-color);
   line-height: 1.35;
-  margin-bottom: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto 30px;
+  display: block;
+  width: 100%;
 }
 
 .awards-divider {
   display: block;
   margin: 0 auto 30px;
+  width: 100%;
   max-width: 250px;
+  height: auto;
 }
 
 .awards-intro {
+  font-family: var(--font-family);
   font-size: 18px;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.6;
   max-width: 650px;
   margin: 0 auto;
-  line-height: 1.6;
+  text-align: center;
 }
 
 .awards-list {
@@ -53,9 +66,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px var(--awards-padding-mobile-side);
   border-bottom: 1px solid var(--color-border-soft);
-  gap: 20px;
+  gap: var(--awards-item-gap-mobile);
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.5s ease-out, background-color 0.3s ease;
+}
+
+.award-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+}
+
+.award-item--visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .award-col-1 {
@@ -69,36 +96,53 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.award-item:hover .award-col-1 img {
+  transform: scale(1.05);
 }
 
 .award-name-container {
+  width: 100%;
   text-align: center;
 }
 
 .award-name {
-  font-size: 20px;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  font-size: var(--awards-font-size-name-mobile);
   font-weight: 500;
-  margin-bottom: 10px;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .award-year-container {
+  width: 100%;
   text-align: center;
 }
 
 .award-year {
   font-family: var(--font-family-secondary);
-  font-size: 24px;
+  font-size: var(--awards-font-size-year-mobile);
   color: var(--text-color);
+  font-weight: 400;
+}
+
+.award-col-3 {
+  width: 100%;
 }
 
 .award-col-3 p {
-  text-align: center;
-  font-size: 16px;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--awards-font-size-desc-mobile);
   color: var(--text-color-secondary);
-  line-height: 1.5;
+  line-height: var(--awards-line-height-mobile);
+  text-align: center;
 }
 
-/* --- DESKTOP STYLES (min-width: 992px) --- */
+/* --- DESKTOP STYLES --- */
 @media (min-width: 992px) {
   .awards {
     padding: var(--awards-padding-vertical) 0;
@@ -110,14 +154,15 @@
     grid-template-areas: "logo name year desc";
     flex-direction: row;
     align-items: center;
-    text-align: left;
     gap: var(--awards-grid-gap);
     border-bottom: none;
+    padding: 25px 30px;
   }
 
   .award-col-1 {
     grid-area: logo;
     max-width: none;
+    justify-content: center;
   }
 
   .award-col-1 img {
@@ -127,6 +172,8 @@
   .award-name-container {
     grid-area: name;
     text-align: left;
+    display: flex;
+    align-items: center;
   }
 
   .award-name {
@@ -137,15 +184,25 @@
     grid-area: year;
     padding-left: var(--awards-year-padding-left);
     text-align: left;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .award-year {
+    font-size: var(--awards-year-font-size-desktop);
   }
 
   .award-col-3 {
     grid-area: desc;
     padding-left: var(--awards-desc-padding-left);
+    display: flex;
+    align-items: center;
   }
 
   .award-col-3 p {
-    text-align: left;
+    font-size: var(--awards-desc-font-size-desktop);
+    line-height: 1.5;
     max-width: var(--awards-desc-max-width);
+    text-align: left;
   }
 }

@@ -1,25 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red; */
-
-  /* DEBUG */
-  /* overflow-x: hidden; */
 }
 
 :root {
-  /* DEBUG */
-  /* overflow-x: hidden; */
-
-  --font-family: "Rubik", italic;
-  --font-family-title: "Great Vibes", normal;
-  --font-family-secondary: "Prata", normal;
+  --font-family: "Rubik", sans-serif;
+  --font-family-title: "Great Vibes", cursive;
+  --font-family-secondary: "Prata", serif;
   --font-weight: 400;
   --content-width: 1200px;
   --text-color: rgb(255, 255, 255);
@@ -34,14 +26,7 @@
   --lightbox-background-color: 0, 0, 0;
   --header-nv-height: 104px;
 
-  background-color: var(--background-color);
-  color: var(--text-color);
-  scroll-behavior: smooth;
-  font-family: var(--font-family);
-
-  
-  
-/* Awards Section Variables */
+  /* Awards Section Variables */
   --awards-padding-vertical: 100px;
   --awards-padding-mobile: 40px;
   --awards-padding-mobile-side: 15px;
@@ -53,7 +38,7 @@
   --awards-item-gap-mobile: 12px;
   --awards-logo-width: 147.91px;
   --awards-logo-height: 73.95px;
-  --awards-logo-width-mobile: 70px;
+  --awards-logo-width-mobile: 280px;
   --awards-font-size-name-mobile: 16px;
   --awards-font-size-year-mobile: 18px;
   --awards-font-size-desc-mobile: 14px;
@@ -69,8 +54,13 @@
   --awards-font-size-desktop: 18px;
   --awards-year-font-size-desktop: 22px;
   --awards-desc-font-size-desktop: 16px;
-  --awards-logo-width-mobile: 280px; 
-  
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
 }
 
 #loader {
