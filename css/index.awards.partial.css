@@ -5,7 +5,6 @@
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
-  /* Visual Stability and Focus Fixes */
   scroll-margin-top: 100px;
   overflow-x: clip;
   contain: layout;
@@ -67,16 +66,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 20px; /* Added side padding for hover effect */
   border-bottom: 1px solid var(--color-border-soft);
   gap: 20px;
-  /* Initial animation state */
+  border-radius: 8px; /* Smooth corners for the glow */
+  
+  /* Initial animation and transition for hover */
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s ease-out, transform 0.4s ease-out, background-color 0.3s ease;
 }
 
-/* State triggered by JavaScript when element enters viewport */
+/* Hover Glow Effect */
+.award-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px); /* Slight lift on hover */
+  cursor: default;
+}
+
 .award-item--visible {
   opacity: 1;
   transform: translateY(0);
@@ -93,6 +100,12 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Slight logo scale on hover */
+.award-item:hover .award-col-1 img {
+  transform: scale(1.05);
 }
 
 .award-name-container {
@@ -142,15 +155,14 @@
 
   .award-item {
     display: grid;
-    /* Grid layout for desktop: logo, name, year, description */
     grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
     flex-direction: row;
     align-items: center;
     gap: var(--awards-grid-gap);
     border-bottom: none;
-    padding: 20px 0;
-    /* Animation properties inherited from mobile rule */
+    padding: 25px 30px;
+    text-align: left;
   }
 
   .award-col-1 {
