@@ -1,6 +1,7 @@
+/* --- MOBILE STYLES (Default) --- */
 .awards {
   background-color: var(--background-color);
-  padding: var(--awards-padding-vertical) 0;
+  padding: var(--awards-padding-mobile) var(--awards-padding-mobile-side);
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
@@ -8,7 +9,7 @@
 
 .awards-header {
   text-align: center;
-  margin-bottom: var(--awards-margin-header);
+  margin-bottom: var(--awards-margin-header-mobile);
   background-color: transparent;
 }
 
@@ -24,7 +25,7 @@
 
 .awards-main-title {
   font-family: var(--font-family-secondary);
-  font-size: var(--awards-title-font-size);
+  font-size: var(--awards-title-font-size-mobile);
   color: var(--text-color);
   line-height: 1.35;
   font-weight: 400;
@@ -45,7 +46,7 @@
 .awards-intro {
   font-family: var(--font-family);
   font-size: 18px;
-  color: #FFFFFF;
+  color: var(--text-color);
   font-weight: 400;
   line-height: 1.6;
   max-width: 650px;
@@ -56,124 +57,121 @@
 .awards-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--awards-item-gap-mobile);
 }
 
 .award-item {
   display: grid;
-  grid-template-columns: 150px 1fr auto 2fr;
-  grid-template-areas: "logo name year desc";
-  align-items: center;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "logo"
+    "name"
+    "year"
+    "desc";
+  gap: var(--awards-item-gap-mobile);
   padding: 20px 0;
+  border-bottom: 1px solid var(--color-border-soft);
 }
 
 .award-col-1 {
   grid-area: logo;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 .award-col-1 img {
-  max-width: 100%;
+  width: var(--awards-logo-width-mobile);
   height: auto;
   object-fit: contain;
 }
 
 .award-name-container {
   grid-area: name;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .award-name {
   font-family: var(--font-family);
-  color: #FFFFFF;
-  font-size: 18px;
+  color: var(--text-color);
+  font-size: var(--awards-font-size-name-mobile);
   font-weight: 500;
   line-height: 1.2;
   margin: 0;
-  text-align: left;
 }
 
 .award-year-container {
   grid-area: year;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 .award-year {
   font-family: var(--font-family-secondary);
-  font-size: 22px;
+  font-size: var(--awards-font-size-year-mobile);
   color: var(--text-color);
   font-weight: 400;
-  margin: 0;
 }
 
 .award-col-3 {
   grid-area: desc;
-  display: flex;
-  align-items: center;
 }
 
 .award-col-3 p {
   margin: 0;
   font-family: var(--font-family);
-  font-size: 16px;
+  font-size: var(--awards-font-size-desc-mobile);
   color: var(--text-color-secondary);
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: var(--awards-line-height-mobile);
   text-align: left;
 }
 
-@media (max-width: 991px) {
+/* --- DESKTOP STYLES (min-width: 992px) --- */
+@media (min-width: 992px) {
   .awards {
-    padding: var(--awards-padding-mobile) var(--awards-padding-mobile-side);
+    padding: var(--awards-padding-vertical) 0;
   }
 
   .awards-header {
-    margin-bottom: var(--awards-margin-header-mobile);
+    margin-bottom: var(--awards-margin-header);
   }
 
   .awards-main-title {
-    font-size: var(--awards-title-font-size-mobile);
+    font-size: var(--awards-title-font-size);
+  }
+
+  .awards-list {
+    gap: 40px;
   }
 
   .award-item {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "logo"
-      "name"
-      "year"
-      "desc";
-    justify-items: start;
-    gap: var(--awards-item-gap-mobile);
-    border-bottom: 1px solid var(--color-border-soft);
+    grid-template-columns: 150px 1fr auto 2fr;
+    grid-template-areas: "logo name year desc";
+    align-items: center;
+    gap: 30px;
+    border-bottom: none;
+  }
+
+  .award-col-1 {
+    justify-content: center;
   }
 
   .award-col-1 img {
-    width: var(--awards-logo-width-mobile);
-  }
-
-  .award-name-container, .award-year-container {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
+    width: var(--awards-logo-width);
   }
 
   .award-name {
-    font-size: var(--awards-font-size-name-mobile);
+    font-size: 18px;
   }
 
   .award-year {
-    font-size: var(--awards-font-size-year-mobile);
+    font-size: 22px;
   }
 
   .award-col-3 p {
-    font-size: var(--awards-font-size-desc-mobile);
-    line-height: var(--awards-line-height-mobile);
+    font-size: 16px;
+    line-height: 1.5;
   }
+
+  /* Fixed widths for consistency on large screens */
+  .award-item:nth-child(1) .award-col-3 { max-width: 501.76px; }
+  .award-item:nth-child(2) .award-col-3 { max-width: 502.4px; }
+  .award-item:nth-child(3) .award-col-3 { max-width: 493.52px; }
+  .award-item:nth-child(4) .award-col-3 { max-width: 510px; }
 }
