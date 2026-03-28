@@ -141,10 +141,10 @@
   }
 
   .award-item {
-    grid-template-columns: 150px 1fr auto 2fr;
+    grid-template-columns: 150px 200px 80px 1fr;
     grid-template-areas: "logo name year desc";
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     border-bottom: none;
   }
 
@@ -156,22 +156,31 @@
     width: var(--awards-logo-width);
   }
 
+  .award-name-container {
+    display: flex;
+    align-items: center;
+  }
+
   .award-name {
     font-size: 18px;
+    width: 100%;
+  }
+
+  .award-year-container {
+    display: flex;
+    justify-content: flex-start;
   }
 
   .award-year {
     font-size: 22px;
   }
 
+  .award-col-3 {
+    max-width: 600px;
+  }
+
   .award-col-3 p {
     font-size: 16px;
     line-height: 1.5;
   }
-
-  /* Fixed widths for consistency on large screens */
-  .award-item:nth-child(1) .award-col-3 { max-width: 501.76px; }
-  .award-item:nth-child(2) .award-col-3 { max-width: 502.4px; }
-  .award-item:nth-child(3) .award-col-3 { max-width: 493.52px; }
-  .award-item:nth-child(4) .award-col-3 { max-width: 510px; }
 }
