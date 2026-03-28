@@ -5,7 +5,6 @@
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
-  /* Visual Stability and Focus Fixes */
   scroll-margin-top: 100px;
   overflow-x: clip;
   contain: layout;
@@ -69,11 +68,9 @@
   align-items: center;
   padding: 30px 20px;
   border-bottom: 1px solid var(--color-border-soft);
-  gap: 10px;
+  gap: 20px;
   border-radius: 8px;
-  cursor: pointer;
-  position: relative;
-  /* Animation and Transition properties */
+  /* Animation and Transition */
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.4s ease-out, background-color 0.3s ease;
@@ -85,27 +82,10 @@
   transform: translateY(-2px);
 }
 
-/* Scroll Reveal Visibility Class */
+/* Scroll Reveal Class */
 .award-item--visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Interactive Indicator (Arrow) */
-.award-item::after {
-  content: '▼';
-  position: absolute;
-  right: 20px;
-  top: 30px;
-  font-size: 12px;
-  color: var(--accent-color);
-  transition: transform 0.3s ease;
-  opacity: 0.5;
-}
-
-.award-item--active::after {
-  transform: rotate(180deg);
-  opacity: 1;
 }
 
 .award-col-1 {
@@ -154,16 +134,6 @@
 
 .award-col-3 {
   width: 100%;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.3s ease;
-}
-
-.award-item--active .award-col-3 {
-  max-height: 300px;
-  opacity: 1;
-  margin-top: 15px;
 }
 
 .award-col-3 p {
@@ -192,6 +162,51 @@
     padding: 25px 30px;
   }
 
-  .award-item::after {
-    right: 30px;
-    top: 50%;
+  .award-col-1 {
+    grid-area: logo;
+    max-width: none;
+    justify-content: center;
+  }
+
+  .award-col-1 img {
+    width: var(--awards-logo-width);
+  }
+
+  .award-name-container {
+    grid-area: name;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .award-name {
+    font-size: var(--awards-font-size-desktop);
+    margin: 0;
+  }
+
+  .award-year-container {
+    grid-area: year;
+    padding-left: var(--awards-year-padding-left);
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .award-year {
+    font-size: var(--awards-year-font-size-desktop);
+  }
+
+  .award-col-3 {
+    grid-area: desc;
+    padding-left: var(--awards-desc-padding-left);
+    display: flex;
+    align-items: center;
+  }
+
+  .award-col-3 p {
+    font-size: var(--awards-desc-font-size-desktop);
+    line-height: 1.5;
+    max-width: var(--awards-desc-max-width);
+    text-align: left;
+  }
+}
