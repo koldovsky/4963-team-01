@@ -1,3 +1,7 @@
+/**
+ * Initializes the scroll-reveal animation for award items.
+ * Uses IntersectionObserver for better performance compared to scroll listeners.
+ */
 export function initAwardsReveal() {
   const awardItems = document.querySelectorAll('.award-item');
 
@@ -10,7 +14,7 @@ export function initAwardsReveal() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('award-item--visible');
-        // Stop observing after animation triggers
+        // Stop observing once the element is visible to save resources
         observer.unobserve(entry.target);
       }
     });
