@@ -5,9 +5,11 @@
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
+  /* Visual Stability Fixes */
   scroll-margin-top: 100px;
   overflow-x: clip;
   contain: layout;
+  position: relative;
 }
 
 .awards-header {
@@ -125,10 +127,12 @@
   text-align: left;
 }
 
-
+/* --- DESKTOP STYLES (min-width: 992px) --- */
 @media (min-width: 992px) {
   .awards {
     padding: var(--awards-padding-vertical) 0;
+    /* Ensure the container doesn't shift during resize */
+    min-height: 600px;
   }
 
   .awards-header {
@@ -144,7 +148,7 @@
   }
 
   .award-item {
-    
+    /* Using fixed width for logo, name, and year columns to prevent jumping */
     grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
     align-items: center;
