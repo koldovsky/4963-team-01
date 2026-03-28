@@ -17,7 +17,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="js/index.js" type="module"></script>
   </head>
   <body>
     <!-- IF THERE ARE ANY MISTAKES IN THE COMMENTS, I APOLOGIZE -->
@@ -139,11 +138,20 @@
       data-hx-get="index.age-modal.partial.html"
     ></div>
     <!-- End of modal window -->
+
     <div
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
       data-hx-get="index.loader.partial.html"
     ></div>
+    
+    <!-- Brytan Vitalii -->
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.shopping-cart.partial.html"
+    ></div>
+    <!-- ============== -->
     <script src="js/index.js"></script>
   </body>
 </html>

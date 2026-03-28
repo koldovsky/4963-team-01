@@ -8,9 +8,15 @@
   padding: 0;
   box-sizing: border-box;
   /* outline: 1px solid red; */
+
+  /* DEBUG */
+  /* overflow-x: hidden; */
 }
 
 :root {
+  /* DEBUG */
+  /* overflow-x: hidden; */
+
   --font-family: "Rubik", italic;
   --font-family-title: "Great Vibes", normal;
   --font-family-secondary: "Prata", normal;

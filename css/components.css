@@ -4,6 +4,7 @@
   
   .button--primary   | Filled button with accent background color
   .button--secondary | Outline button with text color border
+  .required-field-label | Adds a red asterisk after the label text to indicate a required field
 
 */
 
@@ -47,5 +48,13 @@
   &:hover {
     background: var(--text-color);
     color: var(--background-color);
+  }
+}
+
+.required-field-label {
+  &::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
   }
 }
