@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 64vh;
-  padding: 5rem 1rem;
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +11,11 @@
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
+}
+
+.discover__content {
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .discover__top {
@@ -75,8 +80,12 @@
 @media (min-width: 768px) {
   .discover {
     min-height: 74vh;
-    padding: 6rem 1.25rem;
+    padding: 6rem 0;
     background-attachment: fixed;
+  }
+
+  .discover__content {
+    padding: 0 1.25rem;
   }
 
   .discover__title {
@@ -102,6 +111,10 @@
 @media (min-width: 992px) {
   .discover {
     min-height: 78vh;
-    padding: 7rem 1rem;
+    padding: 7rem 0;
+  }
+
+  .discover__content {
+    padding: 0 1rem;
   }
 }
