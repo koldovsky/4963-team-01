@@ -58,14 +58,15 @@
   align-items: center;
   padding: 20px 0;
   border: none;
-  gap: var(--awards-item-gap); 
+  gap: 20px;
+  width: 100%;
 }
 
 .award-col-1 {
   flex: 0 0 var(--awards-logo-width);
   width: var(--awards-logo-width);
   max-width: var(--awards-logo-width);
-  height: var(--awards-logo-height);
+  min-width: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,13 +83,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex: 0 0 auto;
-  gap: 8px;
-  min-width: 280px;
+  flex: 1 1 250px;
+  gap: 15px;
+  min-width: 0;
 }
 
 .award-name {
-  flex: 0 0 185px;
+  flex: 1;
   font-family: var(--font-family);
   color: #FFFFFF;
   font-size: 18px;
@@ -96,6 +97,7 @@
   line-height: 1.2;
   margin: 0;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .award-year {
@@ -108,10 +110,10 @@
 }
 
 .award-col-3 {
-  flex: 1;
+  flex: 2 1 400px;
   display: flex;
   align-items: center;
-  min-width: 0; /* Дозволяє контенту всередині flex-блоку стискатися */
+  min-width: 0;
 }
 
 .award-col-3 p {
@@ -124,13 +126,10 @@
   text-align: left;
 }
 
-/* FIX: Changed 'width' to 'max-width' to allow responsiveness */
-.award-item:nth-child(1) .award-col-3 { max-width: 501.76px; }
-.award-item:nth-child(2) .award-col-3 { max-width: 502.4px; }
-.award-item:nth-child(3) .award-col-3 { max-width: 493.52px; }
-.award-item:nth-child(4) .award-col-3 { max-width: 510px; }
+.award-item:nth-child(n) .award-col-3 {
+  max-width: 600px;
+}
 
-/* Mobile Version - Breakpoint 991px */
 @media (max-width: 991px) {
   .awards {
     padding: var(--awards-padding-mobile) var(--awards-padding-mobile-side);
@@ -147,49 +146,3 @@
   .award-item {
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 0;
-    gap: var(--awards-item-gap-mobile);
-    border-bottom: 1px solid var(--color-border-soft);
-  }
-
-  .award-col-1 {
-    width: var(--awards-logo-width-mobile);
-    height: auto;
-    flex: none;
-  }
-
-  .award-col-1 img {
-    width: var(--awards-logo-width-mobile);
-    height: auto;
-  }
-
-  .award-col-2 {
-    width: 100%;
-    justify-content: space-between;
-    min-width: auto;
-  }
-
-  .award-name {
-    flex: none;
-    width: auto;
-    font-size: var(--awards-font-size-name-mobile);
-  }
-
-  .award-year {
-    font-size: var(--awards-font-size-year-mobile);
-  }
-
-  .award-col-3, 
-  .award-item .award-col-3 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .award-col-3 p {
-    text-align: left;
-    font-size: var(--awards-font-size-desc-mobile);
-    line-height: var(--awards-line-height-mobile);
-  }
-}
