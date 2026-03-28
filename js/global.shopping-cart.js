@@ -1,6 +1,7 @@
 // DO NOT USE FOR NOW, THIS FUNCTION IS NOT FULLY IMPLEMENTED AND MAY CAUSE ERRORS.
 
-import { getProductById } from "./products";
+import { getProductById } from "./products.js";
+import { updateCartPopupUI } from "./global.cart-popup.js";
 
 const cart = []; // Stores product ids of products added to the cart
 
@@ -26,30 +27,25 @@ export function addToCart(productID) {
 
 const TEMPLATE = document.querySelector("#cart-item-template");
 const productList = document.querySelector(".cart__items-list");
-// const clone = template.content.cloneNode(true); How to clone
 
 function updateCartUI() {
   productList.innerHTML = "";
-  cart.forEach((productID) => {
-    productList.appendChild(productToHTML(getProductById(productID)));
+  cart.forEach((product) => {
+    productList.appendChild(productToHTML(product));
   });
+
+  updateCartPopupUI(cart.length); // Will later be updated to reflect actual quantity of products, not just count of unique products.
 }
 
-/*
-    Product object structure example:
-    {
-        id: 0,
-        name: "Cabernet",
-        price: 17.00,
-        image: "img/wines-best-deals/cabernet.jpg"
-    },
-*/
 function productToHTML(product) {
-  const productElement = TEMPLATE.content.cloneNode(true);
+  const productElement = TEMPLATE.content.cloneNode(true).querySelector("li");
   productElement.querySelector(".cart__item-image").src = product.image;
   productElement.querySelector(".cart__item-image").alt = `${product.name} preview`;
   productElement.querySelector(".cart__item-info__name").textContent = `${product.name} (${product.id})`;
   productElement.querySelector(".cart__item-info__price").textContent = `${product.price.toFixed(2)}USD`;
+  productElement.querySelector(".cart__item-info__qty").value = 1; // Hard coded quantity for now, as quantity management is not implemented yet.
+  productElement.dataset.productId = product.id; // Set data-product-id for future reference (e.g., removal)
 
+  console.log(productElement);
   return productElement;
 }

@@ -1,8 +1,10 @@
 // Settings
 const TRANSITION_TIME = 0.4; // 0.4s transition time
-const TWO_SLIDES_BREAKPOINT = "765px"; 
+const TWO_SLIDES_BREAKPOINT = "765px";
 const THREE_SLIDES_BREAKPOINT = "990px";
 // --------
+
+import { addToCart } from "./global.shopping-cart.js";
 
 const track = document.querySelector(".best-deals__carousel-track");
 const nextBtn = document.querySelector(".best-deals__carousel__button-next");
@@ -13,7 +15,12 @@ const uniqueItems = document.querySelectorAll(
 const controlDotsContainer = document.querySelector(
   ".best-deals__carousel-controls",
 );
-const dots = controlDotsContainer.querySelectorAll('.best-deals__carousel-controls__button');
+const dots = controlDotsContainer.querySelectorAll(
+  ".best-deals__carousel-controls__button",
+);
+const addToCartButtons = document.querySelectorAll(
+  ".best-deals__carousel-track__item__button",
+);
 
 let cloneIndexMap = null; // Maps indices with clones included to actual wine indicies.
 let items = [...uniqueItems];
@@ -78,8 +85,8 @@ function updateActiveDot() {
   if (!cloneIndexMap) return;
   const logicalIndex = cloneIndexMap[currentIndex];
   if (dots[logicalIndex]) {
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[logicalIndex].classList.add('active');
+    dots.forEach((dot) => dot.classList.remove("active"));
+    dots[logicalIndex].classList.add("active");
   }
 }
 
@@ -104,6 +111,17 @@ prevBtn.addEventListener("click", () => {
   isAnimating = true;
   currentIndex--;
   updateCarousel();
+});
+
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const parent = button.closest(".best-deals__carousel-track__item");
+    if (!parent) return;
+
+    const index = parent.dataset.productId; // Reads data-product-id
+
+    addToCart(Number(index));
+  });
 });
 
 track.addEventListener("transitionend", () => {
@@ -144,7 +162,7 @@ controlDotsContainer.addEventListener("click", (e) => {
     const slidesToShow = getSlidesToShow();
 
     // Dont scroll if you are on a clone, that is the "same" slide
-    // TODO: Better approach, find nearst correct slide (or clone of that slide)  
+    // TODO: Better approach, find nearst correct slide (or clone of that slide)
     const currentLogicalIndex = cloneIndexMap[currentIndex];
     if (index === currentLogicalIndex) {
       return;
