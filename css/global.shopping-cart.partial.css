@@ -4,7 +4,7 @@
 }
 
 .cart {
-  display: none; /* DISABLE CART */
+  display: none;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   height: 100vh;

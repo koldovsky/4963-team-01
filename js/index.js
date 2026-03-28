@@ -1,4 +1,6 @@
 function init() {
+  import("./products.js");
+  import("./global.shopping-cart.js");
   import("./index.best-deals.js");
   import("./index.age-modal.js");
   import("./index.newsletter.js");

@@ -3,6 +3,7 @@
 @import "age-modal.partial.css";
 @import "global.header-nav.partial.css";
 @import "global.shopping-cart.partial.css";
+@import "global.cart-popup.partial.css";
 @import "index.hero.partial.css";
 @import "index.about.partial.css";  
 @import "index.special-wines.partial.css";

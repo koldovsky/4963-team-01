@@ -32,6 +32,7 @@
   --burger-line-size: 2px;
   --copyright-background-color: rgb(0, 0, 0);
   --lightbox-background-color: 0, 0, 0;
+  --header-nv-height: 104px;
 
   background-color: var(--background-color);
   color: var(--text-color);
