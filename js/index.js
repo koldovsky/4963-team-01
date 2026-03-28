@@ -3,8 +3,7 @@ function init() {
   import("./index.age-modal.js");
   import("./index.newsletter.js");
   import("./global.footer.js");
-  import("./index.awards-reveal.js"); 
-
+  import("./index.awards-reveal.js");
 }
 
 const totalPartials = document.querySelectorAll(
