@@ -5,58 +5,42 @@
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
-  /* Visual Stability Fixes */
   scroll-margin-top: 100px;
   overflow-x: clip;
   contain: layout;
-  position: relative;
 }
 
 .awards-header {
   text-align: center;
   margin-bottom: var(--awards-margin-header-mobile);
-  background-color: transparent;
 }
 
 .awards-label {
   display: block;
-  text-align: center;
   font-family: var(--font-family-title);
   color: var(--accent-color);
   font-size: var(--awards-label-font-size);
   margin-bottom: 30px;
-  font-weight: 400;
 }
 
 .awards-main-title {
   font-family: var(--font-family-secondary);
   font-size: var(--awards-title-font-size-mobile);
-  color: var(--text-color);
   line-height: 1.35;
-  font-weight: 400;
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  width: 100%;
+  margin-bottom: 30px;
 }
 
 .awards-divider {
   display: block;
-  margin: 30px auto;
-  width: 100%;
+  margin: 0 auto 30px;
   max-width: 250px;
-  height: auto;
 }
 
 .awards-intro {
-  font-family: var(--font-family);
   font-size: 18px;
-  color: var(--text-color);
-  font-weight: 400;
-  line-height: 1.6;
   max-width: 650px;
   margin: 0 auto;
-  text-align: center;
+  line-height: 1.6;
 }
 
 .awards-list {
@@ -66,98 +50,74 @@
 }
 
 .award-item {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "logo"
-    "name"
-    "year"
-    "desc";
-  gap: var(--awards-item-gap-mobile);
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
   border-bottom: 1px solid var(--color-border-soft);
+  gap: 20px;
 }
 
 .award-col-1 {
-  grid-area: logo;
+  width: 100%;
+  max-width: var(--awards-logo-width-mobile);
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .award-col-1 img {
-  width: var(--awards-logo-width-mobile);
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
 
 .award-name-container {
-  grid-area: name;
+  text-align: center;
 }
 
 .award-name {
-  font-family: var(--font-family);
-  color: var(--text-color);
-  font-size: var(--awards-font-size-name-mobile);
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.2;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .award-year-container {
-  grid-area: year;
+  text-align: center;
 }
 
 .award-year {
   font-family: var(--font-family-secondary);
-  font-size: var(--awards-font-size-year-mobile);
+  font-size: 24px;
   color: var(--text-color);
-  font-weight: 400;
-}
-
-.award-col-3 {
-  grid-area: desc;
 }
 
 .award-col-3 p {
-  margin: 0;
-  font-family: var(--font-family);
-  font-size: var(--awards-font-size-desc-mobile);
+  text-align: center;
+  font-size: 16px;
   color: var(--text-color-secondary);
-  line-height: var(--awards-line-height-mobile);
-  text-align: left;
+  line-height: 1.5;
 }
 
 /* --- DESKTOP STYLES (min-width: 992px) --- */
 @media (min-width: 992px) {
   .awards {
     padding: var(--awards-padding-vertical) 0;
-    /* Ensure the container doesn't shift during resize */
-    min-height: 600px;
-  }
-
-  .awards-header {
-    margin-bottom: var(--awards-margin-header);
-  }
-
-  .awards-main-title {
-    font-size: var(--awards-title-font-size);
-  }
-
-  .awards-list {
-    gap: 40px;
   }
 
   .award-item {
-    /* Using fixed width for logo, name, and year columns to prevent jumping */
+    display: grid;
     grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
+    flex-direction: row;
     align-items: center;
+    text-align: left;
     gap: var(--awards-grid-gap);
     border-bottom: none;
   }
 
   .award-col-1 {
-    justify-content: center;
+    grid-area: logo;
+    max-width: none;
   }
 
   .award-col-1 img {
@@ -165,34 +125,27 @@
   }
 
   .award-name-container {
-    display: flex;
-    align-items: center;
+    grid-area: name;
+    text-align: left;
   }
 
   .award-name {
     font-size: var(--awards-font-size-desktop);
-    margin: 0;
-    text-align: left;
   }
 
   .award-year-container {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .award-year {
-    font-size: var(--awards-year-font-size-desktop);
+    grid-area: year;
+    padding-left: var(--awards-year-padding-left);
+    text-align: left;
   }
 
   .award-col-3 {
-    display: flex;
-    align-items: center;
+    grid-area: desc;
     padding-left: var(--awards-desc-padding-left);
   }
 
   .award-col-3 p {
-    font-size: var(--awards-desc-font-size-desktop);
-    line-height: 1.5;
+    text-align: left;
     max-width: var(--awards-desc-max-width);
   }
 }
