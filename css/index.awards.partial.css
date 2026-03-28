@@ -141,10 +141,10 @@
   }
 
   .award-item {
-    grid-template-columns: 150px 200px 80px 1fr;
+    grid-template-columns: 150px max-content max-content 1fr;
     grid-template-areas: "logo name year desc";
     align-items: center;
-    gap: 40px;
+    gap: 15px;
     border-bottom: none;
   }
 
@@ -159,16 +159,18 @@
   .award-name-container {
     display: flex;
     align-items: center;
+    max-width: 240px;
   }
 
   .award-name {
     font-size: 18px;
-    width: 100%;
+    margin: 0;
   }
 
   .award-year-container {
     display: flex;
     justify-content: flex-start;
+    padding-left: 10px;
   }
 
   .award-year {
@@ -176,11 +178,14 @@
   }
 
   .award-col-3 {
-    max-width: 600px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
   }
 
   .award-col-3 p {
     font-size: 16px;
     line-height: 1.5;
+    max-width: 600px;
   }
 }
