@@ -6,6 +6,7 @@
   font-family: var(--font-family);
   display: block;
   scroll-margin-top: 100px;
+  /* clip prevents horizontal scrollbars during entrance animations */
   overflow-x: clip;
   contain: layout;
 }
@@ -70,19 +71,17 @@
   border-bottom: 1px solid var(--color-border-soft);
   gap: var(--awards-item-gap-mobile);
   border-radius: 8px;
-  /* Scroll reveal initial state with design tokens for timing */
   opacity: 0;
   transform: translateY(30px);
+  /* 0.8s duration ensures smooth perception on mobile hardware */
   transition: opacity 0.8s ease-out, transform 0.5s ease-out, background-color 0.3s ease;
 }
 
-/* Visual feedback on hover for better user engagement */
 .award-item:hover {
   background-color: rgba(255, 255, 255, 0.05);
   transform: translateY(-3px);
 }
 
-/* Visibility class managed by IntersectionObserver in index.awards-reveal.js */
 .award-item--visible {
   opacity: 1;
   transform: translateY(0);
@@ -153,7 +152,6 @@
 
   .award-item {
     display: grid;
-    /* Grid layout for awards: logo, name, year, description */
     grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
     flex-direction: row;
