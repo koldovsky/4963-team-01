@@ -122,7 +122,7 @@
   text-align: left;
 }
 
-/* --- DESKTOP STYLES (min-width: 992px) --- */
+
 @media (min-width: 992px) {
   .awards {
     padding: var(--awards-padding-vertical) 0;
@@ -141,7 +141,7 @@
   }
 
   .award-item {
-    /* Використовуємо фіксовану ширину для колонок лого, назви та року */
+    
     grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
     align-items: center;
