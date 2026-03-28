@@ -141,7 +141,8 @@
   }
 
   .award-item {
-    grid-template-columns: var(--awards-grid-col-logo) max-content max-content 1fr;
+    /* Використовуємо фіксовану ширину для колонок лого, назви та року */
+    grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
     align-items: center;
     gap: var(--awards-grid-gap);
@@ -159,18 +160,17 @@
   .award-name-container {
     display: flex;
     align-items: center;
-    max-width: var(--awards-name-max-width);
   }
 
   .award-name {
     font-size: var(--awards-font-size-desktop);
     margin: 0;
+    text-align: left;
   }
 
   .award-year-container {
     display: flex;
     justify-content: flex-start;
-    padding-left: var(--awards-year-padding-left);
   }
 
   .award-year {
