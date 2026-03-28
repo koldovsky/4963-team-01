@@ -111,6 +111,7 @@
   flex: 1;
   display: flex;
   align-items: center;
+  min-width: 0; /* Дозволяє контенту всередині flex-блоку стискатися */
 }
 
 .award-col-3 p {
@@ -123,11 +124,11 @@
   text-align: left;
 }
 
-/* Specific item widths for desktop layout */
-.award-item:nth-child(1) .award-col-3 { width: 501.76px; max-width: 501.76px; }
-.award-item:nth-child(2) .award-col-3 { width: 502.4px; max-width: 502.4px; }
-.award-item:nth-child(3) .award-col-3 { width: 493.52px; max-width: 493.52px; }
-.award-item:nth-child(4) .award-col-3 { flex-grow: 1; }
+/* FIX: Changed 'width' to 'max-width' to allow responsiveness */
+.award-item:nth-child(1) .award-col-3 { max-width: 501.76px; }
+.award-item:nth-child(2) .award-col-3 { max-width: 502.4px; }
+.award-item:nth-child(3) .award-col-3 { max-width: 493.52px; }
+.award-item:nth-child(4) .award-col-3 { max-width: 510px; }
 
 /* Mobile Version - Breakpoint 991px */
 @media (max-width: 991px) {
