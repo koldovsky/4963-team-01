@@ -5,6 +5,9 @@
   color: var(--text-color);
   font-family: var(--font-family);
   display: block;
+  scroll-margin-top: 100px;
+  overflow-x: clip;
+  contain: layout;
 }
 
 .awards-header {
