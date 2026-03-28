@@ -32,10 +32,9 @@
   scroll-behavior: smooth;
   font-family: var(--font-family);
 
-
   
   
-  
+/* Awards Section Variables */
   --awards-padding-vertical: 100px;
   --awards-padding-mobile: 40px;
   --awards-padding-mobile-side: 15px;
@@ -44,7 +43,6 @@
   --awards-label-font-size: 28px;
   --awards-title-font-size: 48px;
   --awards-title-font-size-mobile: 28px;
-  --awards-item-gap: 100px;
   --awards-item-gap-mobile: 12px;
   --awards-logo-width: 147.91px;
   --awards-logo-height: 73.95px;
@@ -53,26 +51,17 @@
   --awards-font-size-year-mobile: 18px;
   --awards-font-size-desc-mobile: 14px;
   --awards-line-height-mobile: 1.4;
-  --color-border-soft: rgba(255, 255, 255, 0.1);
 
-
-  --awards-desktop-breakpoint: 992px;
+  /* Awards Desktop Grid Variables */
   --awards-grid-col-logo: 150px;
-  
-  --awards-name-max-width: 240px;
+  --awards-name-col-width: 250px;
+  --awards-year-col-width: 80px;
+  --awards-grid-gap: 30px;
+  --awards-desc-padding-left: 40px;
+  --awards-desc-max-width: 600px;
   --awards-font-size-desktop: 18px;
   --awards-year-font-size-desktop: 22px;
   --awards-desc-font-size-desktop: 16px;
-  --awards-desc-max-width: 600px;
-  --awards-desc-padding-left: 40px;
-  --awards-year-padding-left: 10px;
-
- 
-  
-  --awards-name-col-width: 250px; 
-  --awards-year-col-width: 80px;
-  --awards-grid-gap: 30px;
-}
 
 
 }
