@@ -6,7 +6,7 @@
   font-family: var(--font-family);
   display: block;
   scroll-margin-top: 100px;
-  /* clip prevents horizontal scrollbars during entrance animations */
+  /* overflow-x: clip ensures no layout shift during entrance transforms */
   overflow-x: clip;
   contain: layout;
 }
@@ -73,15 +73,17 @@
   border-radius: 8px;
   opacity: 0;
   transform: translateY(30px);
-  /* 0.8s duration ensures smooth perception on mobile hardware */
+  /* 0.8s timing selected to allow visual focus on each element as it enters viewport */
   transition: opacity 0.8s ease-out, transform 0.5s ease-out, background-color 0.3s ease;
 }
 
+/* Hover state provides interactive affordance despite lack of click actions */
 .award-item:hover {
   background-color: rgba(255, 255, 255, 0.05);
   transform: translateY(-3px);
 }
 
+/* This class is strictly controlled by IntersectionObserver in index.awards-reveal.js */
 .award-item--visible {
   opacity: 1;
   transform: translateY(0);
@@ -152,6 +154,7 @@
 
   .award-item {
     display: grid;
+    /* Grid areas mapped to award attributes: logo, name, year, description */
     grid-template-columns: var(--awards-grid-col-logo) var(--awards-name-col-width) var(--awards-year-col-width) 1fr;
     grid-template-areas: "logo name year desc";
     flex-direction: row;
