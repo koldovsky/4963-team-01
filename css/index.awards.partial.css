@@ -63,7 +63,7 @@
 .award-item {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "logo"
     "name"
     "year"
@@ -141,10 +141,10 @@
   }
 
   .award-item {
-    grid-template-columns: 150px max-content max-content 1fr;
+    grid-template-columns: var(--awards-grid-col-logo) max-content max-content 1fr;
     grid-template-areas: "logo name year desc";
     align-items: center;
-    gap: 15px;
+    gap: var(--awards-grid-gap);
     border-bottom: none;
   }
 
@@ -159,33 +159,33 @@
   .award-name-container {
     display: flex;
     align-items: center;
-    max-width: 240px;
+    max-width: var(--awards-name-max-width);
   }
 
   .award-name {
-    font-size: 18px;
+    font-size: var(--awards-font-size-desktop);
     margin: 0;
   }
 
   .award-year-container {
     display: flex;
     justify-content: flex-start;
-    padding-left: 10px;
+    padding-left: var(--awards-year-padding-left);
   }
 
   .award-year {
-    font-size: 22px;
+    font-size: var(--awards-year-font-size-desktop);
   }
 
   .award-col-3 {
     display: flex;
     align-items: center;
-    padding-left: 40px;
+    padding-left: var(--awards-desc-padding-left);
   }
 
   .award-col-3 p {
-    font-size: 16px;
+    font-size: var(--awards-desc-font-size-desktop);
     line-height: 1.5;
-    max-width: 600px;
+    max-width: var(--awards-desc-max-width);
   }
 }
