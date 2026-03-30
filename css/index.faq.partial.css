@@ -43,7 +43,7 @@
 
 .faq__question {
   border-bottom: 1px solid var(--background-color-dark-gray);
-  padding: 0 15px;
+  margin: 0 15px;
 }
 
 .faq__question-title {
@@ -87,7 +87,7 @@
   transition: max-height 0.2s ease-out;
 }
 
-.faq__question--body-answer {
+.faq__answer {
   padding: 10px 0 20px;
   line-height: 1.5;
   font-family: var(--font-family);
