@@ -76,7 +76,7 @@
   transform: translateY(-50%) rotate(90deg);
 }
 
-.faq__question-title.active::after {
+.faq__question-title--active::after {
   transform: translateY(-50%) rotate(90deg) scaleX(0);
   opacity: 0;
 }
@@ -87,7 +87,7 @@
   transition: max-height 0.2s ease-out;
 }
 
-.faq__answer {
+.faq__question__answer {
   padding: 10px 0 20px;
   line-height: 1.5;
   font-family: var(--font-family);
