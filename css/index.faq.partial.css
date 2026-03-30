@@ -25,6 +25,7 @@
   font-size: 34px;
   line-height: 45px;
   margin-top: 20px;
+  padding: 0 15px;
 }
 
 .faq__image {
@@ -51,25 +52,42 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
+  padding-right: 24px;
   cursor: pointer;
   list-style: none;
   font-size: 22px;
+  position: relative;
 }
 
-summary::-webkit-details-marker {
-  display: none;
+.faq__question-title::before,
+.faq__question-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 14px;
+  height: 2px;
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .faq__question-title::after {
-  content: "+";
-  font-size: 20px;
+  transform: translateY(-50%) rotate(90deg);
 }
 
-.faq__question[open] .faq__question-title::after {
-  content: "-";
+.faq__question-title.active::after {
+  transform: translateY(-50%) rotate(90deg) scaleX(0);
+  opacity: 0;
 }
 
-.faq__question-answer {
+.faq__question-body{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.faq__question--body-answer {
   padding: 10px 0 20px;
   line-height: 1.5;
   font-family: var(--font-family);

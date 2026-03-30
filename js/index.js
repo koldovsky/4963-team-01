@@ -7,6 +7,7 @@ function init() {
   import("./index.newsletter.js");
   import("./global.footer.js");
   import("./index.awards-reveal.js");
+  import("./index.faq.js");
 }
 
 const totalPartials = document.querySelectorAll(
