@@ -1,0 +1,107 @@
+.varieties {
+  display: block;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-image: url(../img/background-varieties-partial.png);
+  background-position-x: 80.12%;
+  background-position-y: 43.66%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+
+  .varieties__title {
+    font-size: 27px;
+    color: var(--accent-color);
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight);
+    padding-top: 30px;
+    margin-bottom: 40px;
+  }
+  .varieties__subtitle {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--font-weight);
+    font-size: 47px;
+    color: var(--text-color);
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 345px) {
+    .varieties__title {
+      font-size: 14px;
+    }
+    .varieties__illustration {
+      width: 60%;
+      height: auto;
+    }
+    .varieties__subtitle {
+      font-size: 42px;
+    }
+    .varieties__description {
+      font-size: 10px;
+    }
+  }
+
+  .varieties__illustration {
+    margin-bottom: 30px;
+  }
+
+  .varieties__description {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 18px;
+    margin-top: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  .redwines__title {
+    font-size: 22px;
+    color: var(--text-color);
+    font-family: var(--font-family-secondary);
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  li {
+    font-size: 16px;
+    color: var(--text-color-secondary);
+    font-family: var(--font-family);
+    list-style: none;
+    margin-bottom: 5px;
+  }
+
+  li::before {
+    content: "— ";
+    color: var(--accent-color);
+  }
+
+  .whitewines__title {
+    font-size: 22px;
+    color: var(--text-color);
+    font-family: var(--font-family-secondary);
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  h2,
+  h3,
+  p,
+  img,
+  ul {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 1024px) {
+    h2,
+    h3,
+    p,
+    img,
+    ul {
+      margin-left: 51%;
+      max-width: 53%;
+    }
+  }
+}

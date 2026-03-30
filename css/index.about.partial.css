@@ -1,0 +1,110 @@
+.about {
+  padding: 120px 0 60px;
+}
+
+.about__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 480px;
+  width: 30%;
+  padding: 0 45px 45px 45px;
+}
+
+.event-card {
+  background: url(../img/wines-about-cards/event-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+}
+
+.addictives-card {
+  background: url(../img/wines-about-cards/addictives-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+}
+
+.grape-card {
+  background: url(../img/wines-about-cards/grape-card.jpg) 51.81% 95.23% / cover no-repeat, rgb(38, 30, 28);
+}
+
+.about-card__title {
+    font-family: var(--font-family-secondary);
+    font-weight: var(--font-weight);
+    font-size: 22px;
+}
+
+.about-card__title::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 42px;
+    padding-top: 0px;
+    margin: 15px 0;
+    background-color: var(--accent-color);
+}  
+
+.about-card__description {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+}
+
+.about-card__button {
+    position: relative;
+    width: fit-content;
+    margin-top: 32px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.about-card__button::after {
+    content: url(../img/arrow.svg);
+    position: absolute;
+    top: -4px;
+    right: 0;
+    bottom: 0;
+    left: 88px;
+    height: 8px;
+    width: 24px;
+    color: var(--text-color);
+    fill: var(--text-color);
+}
+
+@media (max-width: 769px) {
+  .about {
+    padding: 90px 24px 60px;
+  }  
+  .about__container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .about-card {
+    width: 47%;
+  }
+}
+
+@media (max-width: 426px) {
+  .about__container {
+    flex-direction: column;
+  }
+  .about-card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .about__container {
+    flex-direction: row;
+  }
+  .about-card {
+    width: 31%;
+  }
+}

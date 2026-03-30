@@ -1,0 +1,132 @@
+.history {
+  background-image: url("../img/background-history-partial.png");
+  background-size: cover;
+  background-position: 36% center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+.history__content {
+  padding: 0px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.history__title {
+  font-family: var(--font-family-title);
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: var(--font-weight);
+}
+
+.history__subtitle {
+  font-family: var(--font-family-secondary);
+  font-size: 58px;
+  color: var(--text-color);
+  padding-top: 20px;
+  font-weight: 400;
+}
+
+.history__logo {
+  padding-top: 20px;
+}
+
+@media (min-width: 420px) {
+  .history__logo {
+    width: 45%;
+  }
+}
+
+.history__text {
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--text-color);
+  padding-top: 20px;
+  line-height: 1.8;
+}
+
+.history__link-container {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.history__link-text {
+  font-family: var(--font-family);
+  font-size: 15px;
+  padding: 0px 10px 0px 0px;
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.history__video {
+  padding: 0px 24px;
+  margin: 50px 0px 0px;
+}
+
+.history__video-play-icon {
+  width: 50px;
+  height: 50px;
+  color: var(--accent-color);
+}
+
+.history__video-text {
+  font-family: var(--font-family);
+  font-size: 14px;
+  padding: 20px 0px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .history__container {
+    display: grid;
+    grid-template-columns: 2fr minmax(92px, 170px) 3fr;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .history__content {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+  }
+  .history__video {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    grid-column: 3;
+  }
+  .history__video-play-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .history__subtitle {
+    font-size: 71px;
+    max-width: 370px;
+  }
+  .history__title {
+    font-size: 21px;
+  }
+  .history__logo {
+    width: 65%;
+    max-width: 165px;
+  }
+  .history__text {
+    max-width: 370px;
+  }
+}
+
+@media (min-width: 992px) {
+  .history__subtitle {
+    font-size: 84px;
+  }
+  .history__title {
+    font-size: 28px;
+  }
+}

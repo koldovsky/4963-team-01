@@ -1,0 +1,60 @@
+/* 
+
+  Utility Classes
+  
+  .button--primary   | Filled button with accent background color
+  .button--secondary | Outline button with text color border
+  .required-field-label | Adds a red asterisk after the label text to indicate a required field
+
+*/
+
+
+.button--primary,
+.button--secondary {
+  font-family: var(--font-family);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 15.6px 23.6px;
+  border-radius: 2px;
+  transition:
+    background 0.2s ease-in,
+    color 0.2s ease-in,
+    border 0.2s ease-in;
+
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+/* Use this utility-class for primary filled buttons */
+.button--primary {
+  background: var(--accent-color);
+  border: 3px solid var(--accent-color);
+
+  &:hover {
+    background: var(--accent-color-dark);
+    border: 3px solid var(--accent-color-dark);
+  }
+}
+
+/* Use this utility-class for secondary outline buttons */
+.button--secondary {
+  border: 3px solid var(--text-color);
+
+  &:hover {
+    background: var(--text-color);
+    color: var(--background-color);
+  }
+}
+
+.required-field-label {
+  &::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+  }
+}

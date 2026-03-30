@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: "Rubik", sans-serif;
+  --font-family-title: "Great Vibes", cursive;
+  --font-family-secondary: "Prata", serif;
+  --font-weight: 400;
+  --content-width: 1200px;
+  --text-color: rgb(255, 255, 255);
+  --text-color-secondary: rgb(137, 128, 130);
+  --accent-color: rgb(200, 105, 58);
+  --accent-color-dark: rgb(175, 87, 43);
+  --background-color: rgb(38, 30, 28);
+  --background-color-dark: rgb(26, 21, 18);
+  --background-color-dark-gray: rgb(68, 68, 68);
+  --burger-line-size: 2px;
+  --copyright-background-color: rgb(0, 0, 0);
+  --lightbox-background-color: 0, 0, 0;
+  --header-nv-height: 104px;
+
+  /* Awards Section Variables */
+  --awards-padding-vertical: 100px;
+  --awards-padding-mobile: 40px;
+  --awards-padding-mobile-side: 15px;
+  --awards-margin-header: 80px;
+  --awards-margin-header-mobile: 30px;
+  --awards-label-font-size: 28px;
+  --awards-title-font-size: 48px;
+  --awards-title-font-size-mobile: 28px;
+  --awards-item-gap-mobile: 12px;
+  --awards-logo-width: 147.91px;
+  --awards-logo-height: 73.95px;
+  --awards-logo-width-mobile: 280px;
+  --awards-font-size-name-mobile: 16px;
+  --awards-font-size-year-mobile: 18px;
+  --awards-font-size-desc-mobile: 14px;
+  --awards-line-height-mobile: 1.4;
+
+  /* Awards Desktop Grid Variables */
+  --awards-grid-col-logo: 150px;
+  --awards-name-col-width: 250px;
+  --awards-year-col-width: 80px;
+  --awards-grid-gap: 30px;
+  --awards-desc-padding-left: 40px;
+  --awards-desc-max-width: 600px;
+  --awards-font-size-desktop: 18px;
+  --awards-year-font-size-desktop: 22px;
+  --awards-desc-font-size-desktop: 16px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+}
+body.no-scroll {
+  overflow: hidden;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 2rem;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}

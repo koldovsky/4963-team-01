@@ -1,0 +1,136 @@
+.faq {
+  padding: 5rem 0;
+}
+
+.faq__top {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__content {
+  max-width: 600px;
+  padding-right: 1rem;
+}
+
+.faq__title {
+  font-size: clamp(14px, 0.8rem + 1.2vw, 28px);
+  font-family: var(--font-family-title);
+  color: var(--accent-color);
+  padding: 0 15px;
+}
+
+.faq__subtitle {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight);
+  font-size: 34px;
+  line-height: 45px;
+  margin-top: 20px;
+}
+
+.faq__image {
+  max-width: 470px;
+  width: 100%;
+}
+
+.faq__illustration {
+  padding: 0 15px;
+}
+
+.faq__questions {
+  margin-top: 20px;
+}
+
+.faq__question {
+  border-bottom: 1px solid var(--background-color-dark-gray);
+  padding: 0 15px;
+}
+
+.faq__question-title {
+  font-family: var(--font-family-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 22px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question-title::after {
+  content: "+";
+  font-size: 20px;
+}
+
+.faq__question[open] .faq__question-title::after {
+  content: "-";
+}
+
+.faq__question-answer {
+  padding: 10px 0 20px;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--text-color-secondary);
+}
+
+.faq__features {
+  margin-top: 80px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.faq__feature-icon {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+.faq__feature-title {
+  margin: 10px auto;
+  font-size: 22px;
+  font-family: var(--font-family-secondary);
+}
+
+.faq__feature-line {
+  fill: none;
+  stroke: var(--accent-color);
+  stroke-width: 2px;
+}
+
+.faq__feature-description {
+  font-size: 16px;
+  color: var(--text-color-secondary);
+  font-family: var(--font-family);
+}
+
+@media (min-width: 479px) {
+  .faq__features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .faq__top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: start;
+  }
+}
+
+@media (min-width: 991px) {
+  .faq__features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1222px) {
+  .faq__question-title {
+    padding: 15px 10px;
+  }
+}

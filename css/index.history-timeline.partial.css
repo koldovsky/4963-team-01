@@ -1,0 +1,132 @@
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 24px 90px;
+}
+
+.history-timeline__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.history-timeline__image {
+  display: block; 
+  width: 100%;
+  height: auto;
+}
+
+.history-timeline__time {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  color: var(--accent-color);
+  font-style: italic;
+  margin-top: 48px;
+  line-height: 1.2;
+}
+
+.history-timeline__title {
+  margin-top: 25px;
+  font-family: 'Prata', serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.history-timeline__title::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 2px;
+  margin-top: 15px;
+  background-color: var(--accent-color);
+}
+
+.history-timeline__paragraph {
+  margin-top: 12px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color-secondary);
+}
+
+@media (min-width: 767px) {
+  .history-timeline {
+    padding: 60px 24px 120px;
+    align-items: center;
+  }
+
+  .history-timeline__image {
+    margin-bottom: 70px;
+  }
+
+  .history-timeline__content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 40px 20px;
+    width: 100%;
+  }
+
+  .history-timeline__item {
+    flex: 0 1 calc(50% - 15px);
+  }
+
+  .history-timeline__time {
+    margin-top: 0; 
+  }
+
+  .history-timeline__title {
+    font-size: 28px; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .history-timeline {
+    padding: 60px 40px 120px;
+  }
+
+  .history-timeline__image {
+    margin-bottom: 50px;
+  }
+
+  .history-timeline__content {
+    flex-wrap: nowrap; 
+    gap: 30px;
+  }
+
+  .history-timeline__item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .history-timeline__title {
+    font-size: 22px;
+  }
+}
+
+
+@media (min-width: 1440px) {
+  .history-timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 120px; 
+  }
+
+  .history-timeline__image {
+    margin-bottom: 60px;
+  }
+
+  .history-timeline__content {
+    gap: 40px;
+  }
+
+  .history-timeline__title {
+    font-size: 24px;
+  }
+
+  .history-timeline__paragraph {
+    font-size: 18px;
+  }
+}

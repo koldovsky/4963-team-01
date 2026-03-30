@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine Store Website</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prata&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- IF THERE ARE ANY MISTAKES IN THE COMMENTS, I APOLOGIZE -->
+    <!-- FIX THEM AND CONTINUE INSERTING YOUR BLOCKS IN THAT STYLE -->
+    <!-- Here is the actual table: https://docs.google.com/spreadsheets/d/1JiJa2gdOwm0Sn6SJTLb7j3ZhMzCGTL5Hwy2xu_c6u-I/edit?gid=0#gid=0 -->
+
+    <header class="header">
+      <!-- Bilous Andrii (1) -->
+      <nav
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+      <!-- ============== -->
+    </header>
+    <main class="main">
+      <!-- Bilous Andrii (1) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.hero.partial.html"
+      ></section>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.about.partial.html"
+      ></section>
+      <!-- Novykov Dmytro -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.special-wines.partial.html"
+      ></section>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.discover-our-wines.partial.html"
+      ></section>
+      <!-- ============== -->
+      <!-- Vitalii Brytan (3) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.best-deals.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Sapeliuk Iryna (4)-->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.history-timeline.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Bondarenko Vladyslav (5) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.varieties.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Ivan Butryn (6)-->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.craft-wines.partial.html"
+      ></section>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.history.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Olesia Konior (7) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.wine-categories.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Andrii Oliinyk (8) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.awards.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Novykov Dmytro (10) -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.faq.partial.html"
+      ></section>
+      <!-- ============== -->
+
+      <!-- Volodymyr Andriichak (11)-->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.newsletter.partial.html"
+      ></section>
+      <!-- ============== -->
+    </main>
+    <!-- Volodymyr Andriichak (11)-->
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+    <!-- Novykov Dmytro -->
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.age-modal.partial.html"
+    ></div>
+    <!-- End of modal window -->
+
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.loader.partial.html"
+    ></div>
+
+    <!-- Brytan Vitalii -->
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.shopping-cart.partial.html"
+    ></div>
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.cart-popup.partial.html"
+    ></div>
+    <!-- ============== -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
