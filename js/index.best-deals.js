@@ -19,18 +19,29 @@ const dots = controlDotsContainer.querySelectorAll(
   ".best-deals__carousel-controls__button",
 );
 
-let addToCartButtons = document.querySelectorAll(
+// Get and set event listeners for add to cart buttons in the initial slides (*NOT CLONES*)
+const addToCartButtons = document.querySelectorAll(
   ".best-deals__carousel-track__item__button",
 );
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const parent = button.closest(".best-deals__carousel-track__item");
+    if (!parent) return;
+
+    const index = parent.dataset.productId; // Reads data-product-id
+
+    addToCart(Number(index));
+  });
+});
+
 let cloneIndexMap = null; // Maps indices with clones included to actual wine indicies.
 let items = [...uniqueItems];
 let currentIndex = 0;
 let currentSlidesShown = 0;
 let isAnimating = false;
 
-makeClones();
-setInitialPosition();
-updateActiveDot();
+
+initializeCarousel();
 
 function getSlidesToShow() {
   if (matchMedia(`(min-width: ${THREE_SLIDES_BREAKPOINT})`).matches) {
@@ -52,12 +63,14 @@ function makeClones() {
   // Remove old clones
   track.querySelectorAll(".best-deals__clone").forEach((c) => c.remove());
   items = [...uniqueItems];
+  const clones = [];
 
   // Clone first slidesToShow slides at the end
   for (let i = 0; i < slidesToShow; i++) {
     const clone = items[i].cloneNode(true);
     clone.classList.add("best-deals__clone");
     track.appendChild(clone);
+    clones.push(clone);
   }
 
   // Clone last slidesToShow slides at the start
@@ -65,6 +78,7 @@ function makeClones() {
     const clone = items[i].cloneNode(true);
     clone.classList.add("best-deals__clone");
     track.insertBefore(clone, track.firstChild);
+    clones.push(clone);
   }
 
   // Recalculating items and indices after cloning
@@ -73,7 +87,13 @@ function makeClones() {
   cloneIndexMap = items.map((slide) => Number(slide.dataset.index));
 
   // Update event listeners for new buttons in clones
-  updateEventListeners();
+  updateClonesEventListeners(clones);
+}
+
+function initializeCarousel() {
+  makeClones();
+  setInitialPosition();
+  updateActiveDot();
 }
 
 function setInitialPosition() {
@@ -100,12 +120,14 @@ function updateCarousel() {
   updateActiveDot();
 }
 
-function updateEventListeners() {
-  addToCartButtons = document.querySelectorAll(
-    ".best-deals__carousel-track__item__button",
-  );
-  addToCartButtons.forEach((button) => {
-    button.removeEventListener("click", handleAddToCart);
+function updateClonesEventListeners(clones) {
+  const buttons = clones
+    .map((clone) =>
+      clone.querySelector(".best-deals__carousel-track__item__button")
+    )
+    .filter(Boolean);
+  buttons.forEach((button) => {
+    button.removeEventListener("click", () => handleAddToCart(button));
     button.addEventListener("click", () => handleAddToCart(button));
   });
 }
