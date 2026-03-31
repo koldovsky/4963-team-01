@@ -18,10 +18,10 @@ const controlDotsContainer = document.querySelector(
 const dots = controlDotsContainer.querySelectorAll(
   ".best-deals__carousel-controls__button",
 );
-const addToCartButtons = document.querySelectorAll(
+
+let addToCartButtons = document.querySelectorAll(
   ".best-deals__carousel-track__item__button",
 );
-
 let cloneIndexMap = null; // Maps indices with clones included to actual wine indicies.
 let items = [...uniqueItems];
 let currentIndex = 0;
@@ -71,6 +71,9 @@ function makeClones() {
   items = [...track.querySelectorAll(".best-deals__carousel-track__item")];
   currentIndex = slidesToShow;
   cloneIndexMap = items.map((slide) => Number(slide.dataset.index));
+
+  // Update event listeners for new buttons in clones
+  updateEventListeners();
 }
 
 function setInitialPosition() {
@@ -97,6 +100,25 @@ function updateCarousel() {
   updateActiveDot();
 }
 
+function updateEventListeners() {
+  addToCartButtons = document.querySelectorAll(
+    ".best-deals__carousel-track__item__button",
+  );
+  addToCartButtons.forEach((button) => {
+    button.removeEventListener("click", handleAddToCart);
+    button.addEventListener("click", () => handleAddToCart(button));
+  });
+}
+
+function handleAddToCart(button) {
+  const parent = button.closest(".best-deals__carousel-track__item");
+  if (!parent) return;
+
+  const index = parent.dataset.productId; // Reads data-product-id
+
+  addToCart(Number(index));
+}
+
 nextBtn.addEventListener("click", () => {
   if (isAnimating) return;
 
@@ -111,17 +133,6 @@ prevBtn.addEventListener("click", () => {
   isAnimating = true;
   currentIndex--;
   updateCarousel();
-});
-
-addToCartButtons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    const parent = button.closest(".best-deals__carousel-track__item");
-    if (!parent) return;
-
-    const index = parent.dataset.productId; // Reads data-product-id
-
-    addToCart(Number(index));
-  });
 });
 
 track.addEventListener("transitionend", () => {
