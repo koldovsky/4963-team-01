@@ -10,9 +10,6 @@ export function initAwardsReveal() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('award-item--visible');
-        /* Unobserve stops execution after visibility trigger to maintain 
-         low CPU usage on page scroll 
-        */
         observer.unobserve(entry.target);
       }
     });

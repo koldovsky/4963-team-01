@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "4963-team-01",
+			"path": "../4963-team-01"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "4963-team-01-main"
+	}
+}
