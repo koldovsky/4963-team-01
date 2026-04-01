@@ -1,6 +1,6 @@
 @import "global.css";
 @import "components.css";
-@import "age-modal.partial.css";
+@import "index.age-modal.partial.css";
 @import "global.header-nav.partial.css";
 @import "global.shopping-cart.partial.css";
 @import "global.cart-popup.partial.css";

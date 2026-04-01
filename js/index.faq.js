@@ -1,7 +1,7 @@
 const faqItemHeaders = document.querySelectorAll(".faq__question-title");
 
 faqItemHeaders.forEach(faqItemHeader => {
-    faqItemHeader.addEventListener("click", event => {
+    faqItemHeader.addEventListener("click", () => {
         const currentlyActiveFaqItemHeader = document.querySelector(".faq__question-title--active");
         if (currentlyActiveFaqItemHeader && currentlyActiveFaqItemHeader !== faqItemHeader) {
             currentlyActiveFaqItemHeader.classList.toggle("faq__question-title--active");

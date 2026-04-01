@@ -59,7 +59,7 @@
   padding: 15.6px 23.6px;
   border-radius: 2px;
 }
-
+/* 
 .age-modal__button--primary {
   background: var(--accent-color);
   border: 2.4px solid var(--accent-color);
@@ -67,7 +67,7 @@
 
 .age-modal__button--ghost {
   border: 2.4px solid var(--text-color);
-}
+} */
 
 .age-modal__illustration {
   width: auto;
