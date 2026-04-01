@@ -9,7 +9,7 @@ faqItemHeaders.forEach(faqItemHeader => {
         }
 
         faqItemHeader.classList.toggle("faq__question-title--active");
-        const faqItemBody = faqItemHeader. nextElementSibling;
+        const faqItemBody = faqItemHeader.nextElementSibling;
         if(faqItemHeader.classList.contains("faq__question-title--active")) {
             faqItemBody.style.maxHeight = faqItemBody.scrollHeight + "px";
         }
