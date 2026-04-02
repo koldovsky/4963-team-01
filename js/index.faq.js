@@ -3,7 +3,6 @@ const faqQuestions = document.querySelector(".faq__questions");
 if (faqQuestions) {
   faqQuestions.addEventListener("click", (event) => {
     const faqItemHeader = event.target.closest(".faq__question-title");
-    console.log("Clicked FAQ item header:", faqItemHeader);
     if (!faqItemHeader || !faqQuestions.contains(faqItemHeader)) return;
 
     const currentlyActiveFaqItemHeader = faqQuestions.querySelector(
