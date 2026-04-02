@@ -39,6 +39,11 @@
   font-size: 14px;
   color: var(--text-color);
   text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.nv__menu-link--hover {
+  color: var(--accent-color);
 }
 
 .nv__social-link {
@@ -48,6 +53,7 @@
   color: var(--accent-color);
   fill: var(--accent-color);
   outline: 1px solid var(--accent-color);
+  transition: all ease-in 0.2s;
 }
 
 .bi-facebook {

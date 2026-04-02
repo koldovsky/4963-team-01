@@ -67,10 +67,23 @@
 .hero__buttons-shop {
   background: var(--accent-color);
   border: 2.4px solid var(--accent-color);
+  transition: all 0.2s ease-in;
+}
+
+.hero__buttons-shop:hover {
+  background-color: var(--accent-color-dark);
+  border-color: var(--accent-color-dark);
 }
 
 .hero__buttons-more {
+  background-color: transparent;
   border: 2.4px solid var(--text-color);
+  transition: all 0.2s ease-in;
+}
+
+.hero__buttons-more:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 
 @media (max-width: 769px) {

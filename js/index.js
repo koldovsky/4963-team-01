@@ -1,4 +1,5 @@
 function init() {
+  import("./index.header-nav.js");
   import("./products.js");
   import("./global.cart-popup.js")
   import("./global.shopping-cart.js");
