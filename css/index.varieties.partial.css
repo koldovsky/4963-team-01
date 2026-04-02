@@ -97,15 +97,6 @@
     transform: translateY(0);
   }
 
-  @media (max-width: 768px) {
-    .varieties__fade-in,
-    .varieties__fade-in--visible {
-      opacity: 1 !important;
-      transform: none !important;
-      transition: none !important;
-    }
-  }
-
   h2,
   h3,
   p,

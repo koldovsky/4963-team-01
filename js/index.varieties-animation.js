@@ -8,13 +8,6 @@ function initVarietiesAnimation() {
 
   if (!revealItems.length) return;
 
-  if (window.innerWidth <= 768) {
-    revealItems.forEach((item) => {
-      item.classList.add('varieties__fade-in--visible');
-    });
-    return;
-  }
-
   revealItems.forEach((item) => {
     item.classList.add('varieties__fade-in');
   });
