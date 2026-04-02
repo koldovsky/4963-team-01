@@ -10,6 +10,7 @@ function init() {
   import("./index.awards-reveal.js");
   import("./index.faq.js");
   import("./index.craft-wines.js");
+  import("./index.varieties-animation.js");
 }
 
 const totalPartials = document.querySelectorAll(
