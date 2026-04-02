@@ -9,6 +9,7 @@ function init() {
   import("./global.footer.js");
   import("./index.awards-reveal.js");
   import("./index.faq.js");
+  import("./index.craft-wines.js");
 }
 
 const totalPartials = document.querySelectorAll(

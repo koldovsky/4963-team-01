@@ -31,28 +31,28 @@ export const products = [
         id: 4,
         name: "Pinot Noir",
         price: 12.00,
-        image: "img/wines-for-craft-wines-partial/pinot-noir.jpg",
+        image: "img/wines-for-craft-wines-partial/pinot-noir-craft-wines.jpg",
         count: 1
     },
     {
         id: 5,
         name: "Riesling",
         price: 16.00,
-        image: "img/wines-for-craft-wines-partial/riesling.jpg",
+        image: "img/wines-for-craft-wines-partial/riesling-craft-wines.jpg",
         count: 1
     },
     {
         id: 6,
         name: "Zifandel",
         price: 14.00,
-        image: "img/wines-for-craft-wines-partial/zifandel.jpg",
+        image: "img/wines-for-craft-wines-partial/zifandel-craft-wines.jpg",
         count: 1
     },
     {
         id: 7,
         name: "Soave",
         price: 12.00,
-        image: "img/wines-for-craft-wines-partial/soave.jpg",
+        image: "img/wines-for-craft-wines-partial/soave-craft-wines.jpg",
         count: 1
     }
 ]
