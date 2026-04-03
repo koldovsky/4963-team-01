@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 
 .discover__content {
@@ -81,7 +81,6 @@
   .discover {
     min-height: 74vh;
     padding: 6rem 0;
-    background-attachment: fixed;
   }
 
   .discover__content {
