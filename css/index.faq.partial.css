@@ -86,7 +86,7 @@
   transition: max-height 0.2s ease-out;
 }
 
-.faq__question__answer {
+.faq__answer {
   padding: 10px 0 20px;
   line-height: 1.5;
   font-family: var(--font-family);
