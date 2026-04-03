@@ -102,7 +102,7 @@
       padding: 2rem 1.5rem;
       text-align: center;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-      color: #fff;
+      color: var(--text-color);
       border-radius: 4px;
 
       .newsletter-modal__close {
@@ -112,7 +112,7 @@
         background: none;
         border: none;
         font-size: 2rem;
-        color: #fff;
+        color: var(--text-color);
         cursor: pointer;
         padding: 0;
         width: 2rem;
