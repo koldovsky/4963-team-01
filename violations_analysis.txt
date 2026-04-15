@@ -1,0 +1,28 @@
+=== VIOLATION ANALYSIS ===
+
+1. SCSS/NESTED CSS (should be vanilla CSS)
+   - css/components.css: BrytanVitalii <brytanvitalii08@gmail.com>
+   - css/global.footer.partial.css: Volodymyr Andriichak <andriychak@gmail.com>
+   - css/index.newsletter.partial.css: Volodymyr Andriichak <andriychak@gmail.com>
+
+2. HARDCODED COLORS (should use CSS variables)
+   - css/global.shopping-cart.partial.css: BrytanVitalii <brytanvitalii08@gmail.com>
+   - css/index.about.partial.css: airdray <belous50409@gmail.com>
+   - css/index.newsletter.partial.css: Volodymyr Andriichak <andriychak@gmail.com>
+
+3. MISSING ALT ATTRIBUTES (accessibility violation)
+   - global.header-nav.partial.html: Volodymyr Andriichak <andriychak@gmail.com>
+   - global.shopping-cart.partial.html: BrytanVitalii <brytanvitalii08@gmail.com>
+   - index.age-modal.partial.html: but-d <dimacpoint@gmail.com>
+   - index.best-deals.partial.html: BrytanVitalii <brytanvitalii08@gmail.com>
+   - index.craft-wines.partial.html: Ivan Butryn <Ivanbutryn@gmail.com>
+   - index.discover-our-wines.partial.html: but-d <dimacpoint@gmail.com>
+   - index.faq.partial.html: Dmytro Novykov <dimacpoint@gmail.com>
+
+4. EVENT LISTENERS NOT USING DELEGATION
+   - js/global.cart-popup.js: BrytanVitalii <brytanvitalii08@gmail.com>
+   - js/global.footer.js: Volodymyr Andriichak <andriychak@gmail.com>
+   - js/global.shopping-cart.js: BrytanVitalii <brytanvitalii08@gmail.com>
+   - js/index.best-deals.js: BrytanVitalii <brytanvitalii08@gmail.com>
+   - js/index.craft-wines.js: Ivan Butryn <Ivanbutryn@gmail.com>
+   - js/index.faq.js: Dmytro Novykov <dimacpoint@gmail.com>
